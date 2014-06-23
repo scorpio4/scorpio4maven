@@ -1,0 +1,5 @@
+PREFIX toolchain: 	<http://factcore.com/core/toolchain/>
+
+SELECT DISTINCT ?this WHERE {
+    ?this a toolchain:Fatal.
+}

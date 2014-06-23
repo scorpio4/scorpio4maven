@@ -1,0 +1,9 @@
+SELECT DISTINCT ?this ?from ?creator ?reader ?updater ?deleter ?exists WHERE {
+
+		OPTIONAL { ?this fact:creator	?creator }
+		?this	fact:reader		?reader.
+		OPTIONAL { ?this fact:from      ?from }
+		OPTIONAL { ?this fact:updater	?updater }
+		OPTIONAL { ?this fact:deleter	?deleter }
+		OPTIONAL { ?this fact:exists	?exists }
+} BINDINGS ?this { (<{{this}}>) }

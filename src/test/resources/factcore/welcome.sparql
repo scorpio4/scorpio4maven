@@ -1,0 +1,4 @@
+SELECT DISTINCT ?this
+WHERE {
+    ?s a ?this.
+}

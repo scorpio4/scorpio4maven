@@ -1,0 +1,5 @@
+SELECT DISTINCT ?this ?label ?type WHERE {
+	?this	rdfs:label  ?label;
+	ux:type     ?type.
+}
+# BINDINGS ?that{ (<{{this}}>) }

@@ -1,0 +1,28 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix fn: <http://factcore.com/vendor/sesame/fn/>.
+@prefix : <http://factcore.com/vendor/sesame/fn/>.
+
+fn:CustomFunction rdfs:subClassOf fn:Function.
+
+:contrive a fn:CustomFunction;
+	rdfs:label		"Contrive";
+	rdfs:comment	"generate a URI from a prefix and remaining arguments";
+	fn:minArguments	"2";
+	fn:maxArguments	"-1";
+.
+
+:UUID a fn:CustomFunction;
+	rdfs:label		"UUID";
+	rdfs:comment	"generate a UUID";
+	fn:minArguments	"0";
+	fn:maxArguments	"1";
+.
+
+:GeoDistance a fn:CustomFunction;
+	rdfs:label		"GeoDistance";
+	rdfs:comment	"calculate the haversine between 2 lat/lon points";
+	fn:minArguments	"4";
+	fn:maxArguments	"4";
+.

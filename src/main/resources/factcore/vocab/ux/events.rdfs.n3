@@ -1,0 +1,136 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:factcore:fact:>.
+@prefix iq:			<urn:factcore:>.
+@prefix ux:			<urn:factcore:ux:>.
+@prefix : 			<urn:factcore:ux:>.
+
+#
+# UX Behavioural Properties
+#
+
+:event
+	rdfs:subPropertyOf	iq:triggers;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on event";
+	rdfs:range  		:Behaviour;
+.
+
+:start
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on start";
+	rdfs:comment		"an action triggered after starting a service";
+	rdfs:domain			:Startable;
+	rdfs:range  		:Behaviour;
+.
+
+:beforeStart
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"before starting";
+	rdfs:comment		"an action triggered before starting a service";
+	rdfs:domain			:Startable;
+	rdfs:range  		:Behaviour;
+.
+:stop
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on stop";
+	rdfs:comment		"an action triggered after stopping a service";
+	rdfs:domain			:Startable;
+	rdfs:range  		:Behaviour;
+.
+
+:beforeStop
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"before stopping";
+	rdfs:comment		"an action triggered before stopping a service";
+	rdfs:domain			:Startable;
+	rdfs:range  		:Behaviour;
+.
+:render
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on render";
+	rdfs:comment		"an action triggered after displaying";
+	rdfs:domain			:Renderer;
+	rdfs:range  		:Behaviour;
+.
+
+:beforeRender
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"before rendering";
+	rdfs:comment		"an action triggered before displaying";
+	rdfs:domain			:Renderer;
+	rdfs:range  		:Behaviour;
+.
+:close
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on close";
+	rdfs:comment		"an action triggered after closing view";
+	rdfs:domain			:View;
+	rdfs:range  		:Behaviour;
+.
+
+:beforeClose
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"before closing";
+	rdfs:comment		"an action triggered before closing view";
+	rdfs:domain			:View;
+	rdfs:range  		:Behaviour;
+.
+
+:invalid
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on invalid";
+	rdfs:comment		"an action triggered after validation";
+	rdfs:domain			:Component;
+	rdfs:range  		:Behaviour;
+.
+
+:beforeInvalid
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"before invalid";
+	rdfs:comment		"an action triggered after before checking validation";
+	rdfs:domain			:Component;
+	rdfs:range  		:Behaviour;
+.
+
+:select
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on select";
+	rdfs:comment		"an action triggered after a user selection";
+	rdfs:domain			:UX;
+	rdfs:range  		:Behaviour;
+.
+
+:unSelect
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on un-select";
+	rdfs:comment		"an action triggered when a user selection is cancelled";
+	rdfs:domain			:UX;
+	rdfs:range  		:Behaviour;
+.
+
+:activate
+	rdfs:subPropertyOf	:Event;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on activate";
+	rdfs:comment		"an action triggered when a user activates something";
+	rdfs:domain			:UX;
+	rdfs:range  		:Behaviour;
+.

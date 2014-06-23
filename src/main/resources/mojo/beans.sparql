@@ -1,0 +1,7 @@
+prefix camel: 		<http://factcore.com/core/camel/>
+
+SELECT DISTINCT ?this ?class
+WHERE {
+?this a ?class.
+?class a camel:Bean.
+}

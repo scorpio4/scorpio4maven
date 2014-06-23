@@ -1,0 +1,6 @@
+SELECT DISTINCT ?this ?classname
+WHERE {
+    ?this   a               ?that.
+    ?that   iq:classname    ?classname.
+}
+

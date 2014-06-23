@@ -1,0 +1,58 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:factcore:>.
+@prefix fact:		<urn:factcore:fact:>.
+@prefix : 			<urn:factcore:fact:example:>.
+
+
+#
+# EXAMPLE
+#
+:Model
+	a			iq:Example;
+	rdfs:label	"All Examples Model";
+
+	fact:reader			fact:ModelReader;
+	fact:creator 		fact:ModelCreator;
+	fact:updater		fact:ModelUpdater;
+	fact:deleter		fact:ModelDelete;
+	fact:exists			fact:ModelExists;
+
+	fact:onCreate		:OnCreate;
+	fact:onRead			:OnRead;
+	fact:onUpdate		:OnUpdate;
+	fact:onDelete		:OnDelete;
+
+	fact:where	[
+		fact:order	0;
+		fact:this	:that;
+		fact:has	rdfs:type;
+		fact:that	:this;
+	];
+	fact:where	[
+		fact:order	1;
+		fact:this	:this;
+		fact:has	rdfs:label;
+		fact:that	:label;
+	];
+.
+:ModelReader
+	fact:query			"SELECT DISTINCT ?this ?label WHERE {?this a iq:Example; rdfs:label ?label.}"^^<http://www.iana.org/assignments/media-types/application/x-sparql-query>;
+.
+
+:that
+	rdfs:label	"Parent#";
+.
+:label
+	rdfs:label	"Label";
+.
+:this
+	rdfs:label	"ID#";
+.
+
+

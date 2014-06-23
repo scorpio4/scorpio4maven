@@ -1,0 +1,12 @@
+#
+# User Application
+#
+SELECT DISTINCT ?this ?id ?label ?comment ?core WHERE {
+	?this	a               iq:Application;
+            iq:id           ?id;
+		    rdfs:label	    ?label;
+            fact:core       ?core;
+    OPTIONAL {
+        ?this            rdfs:comment    ?comment;
+    }
+} BINDINGS ?this { (<{{application}}>) }

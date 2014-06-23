@@ -1,0 +1,144 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:factcore:>.
+@prefix asq:		<urn:factcore:asq:>.
+@prefix bot:		<urn:factcore:bot:>.
+@prefix : 			<urn:factcore:bot:>.
+
+#
+# Semantic Bot
+#
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"BOT";
+	dc:title			"Semantic Agent";
+	rdfs:comment		"Vocabulary for describing semantic bots";
+	dc:created			"2013-07-1"^^xsd:date;
+	dc:modified			"2013-07-1"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
+.
+
+:Bot
+	a					rdfs:Class;
+	rdfs:label			"Bot";
+	rdfs:comment 		"A conversational UX";
+	rdfs:isDefinedBy	:;
+.
+
+:Thought
+    rdfs:subClassOf     asq:Query;
+	rdfs:label			"Thought";
+	rdfs:comment 		"A bot thought";
+	rdfs:isDefinedBy	:;
+.
+
+:Query
+    rdfs:subClassOf     asq:Query;
+	rdfs:label			"Query";
+	rdfs:comment 		"A bot query";
+	rdfs:isDefinedBy	:;
+.
+
+:Action
+    rdfs:subClassOf     iq:Behaviour;
+	rdfs:label			"Action";
+	rdfs:comment 		"A bot action";
+	rdfs:isDefinedBy	:;
+.
+
+:State
+	rdfs:label			"State";
+	rdfs:comment 		"A bot state";
+	rdfs:isDefinedBy	:;
+.
+
+:Phrase
+	a					rdfs:Class;
+	rdfs:label			"Phrase";
+	rdfs:comment 		"A semantic phrase";
+	rdfs:isDefinedBy	:;
+.
+
+:is
+	a					owl:ObjectProperty;
+	rdfs:label			"is";
+	rdfs:comment 		"bot is";
+	rdfs:isDefinedBy	:;
+	rdfs:domain         :Phrase;
+	rdfs:range          :Bot;
+.
+
+:hears
+	a					owl:DatatypeProperty;
+	rdfs:label			"hears";
+	rdfs:comment 		"bot hears";
+	rdfs:isDefinedBy	:;
+	rdfs:domain         :Phrase;
+	rdfs:range          xsd:string;
+.
+
+:rephrase
+	a					owl:DatatypeProperty;
+	rdfs:label			"rephrases";
+	rdfs:comment 		"bot rephrases";
+	rdfs:isDefinedBy	:;
+	rdfs:domain         :Phrase;
+	rdfs:range          xsd:string;
+.
+
+:say
+	a					owl:DatatypeProperty;
+	rdfs:label			"says";
+	rdfs:comment 		"bot says";
+	rdfs:isDefinedBy	:;
+	rdfs:domain         :Phrase;
+	rdfs:range          xsd:string;
+.
+
+:think
+	a					owl:ObjectProperty;
+	rdfs:label			"thinks";
+	rdfs:comment 		"bot thought";
+	rdfs:isDefinedBy	:;
+	rdfs:domain         :Phrase;
+	rdfs:range          :Thought;
+.
+
+:do
+	a					owl:ObjectProperty;
+	rdfs:label			"do";
+	rdfs:comment 		"bot action";
+	rdfs:isDefinedBy	:;
+	rdfs:domain         :Phrase;
+	rdfs:range          :Action;
+.
+
+:asq
+	a					owl:ObjectProperty;
+	rdfs:label			"asq";
+	rdfs:comment 		"bot query";
+	rdfs:isDefinedBy	:;
+	rdfs:domain         :Phrase;
+	rdfs:range          :Query;
+.
+
+:knows
+	a					owl:ObjectProperty;
+	rdfs:label			"knows";
+	rdfs:comment 		"bot knows";
+	rdfs:isDefinedBy	:;
+	rdfs:domain         :Concept;
+	rdfs:range          :Phrase;
+.
+
+#specific example
+bot:confused
+    bot:say         "??";
+    bot:is          :example;
+.

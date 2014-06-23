@@ -1,0 +1,59 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:factcore:fact:>.
+@prefix iq:			<urn:factcore:>.
+@prefix ux:			<urn:factcore:ux:>.
+@prefix : 			<urn:factcore:application:factcore:ux:user:>.
+
+<urn:factcore:application:factcore:>
+	ux:workspace		:listUsers;
+.
+
+#
+# User
+#
+:listUsers
+
+	ux:id			"users";
+	rdfs:label	    "All Users";
+
+    ux:type         ux:Grid;
+    ux:model        <urn:factcore:application:factcore:facts:users>;
+	ux:renders      :listUsersTemplate;
+
+	ux:field        :this;
+	ux:field        :label;
+
+	ux:render	    :onRender;
+	ux:close	    :onClose;
+	ux:select	    :onSelect;
+.
+
+
+:this
+	rdfs:label		"?this";
+	rdfs:comment	"Identity";
+	ux:field        <urn:factcore:application:factcore:asq:listUsers:this>;
+.
+:label
+	rdfs:label		"?label";
+	rdfs:comment	"Label";
+	ux:field        <urn:factcore:application:factcore:asq:listUsers:label>;
+.
+
+
+:onRender
+	rdfs:label	"Example onRender";
+	ux:script	"console.log('onRender: %o -> %o', this, that);"^^<http://www.iana.org/assignments/media-types/application/ecmascript>;
+.
+
+:onSelect
+	rdfs:label	"Example onSelect";
+	ux:script	"console.log('**** onSelect: %o -> %o', this, that);"^^<http://www.iana.org/assignments/media-types/application/ecmascript>;
+.
+

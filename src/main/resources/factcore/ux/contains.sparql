@@ -1,0 +1,17 @@
+SELECT DISTINCT ?this ?id ?label ?type ?comment ?order
+WHERE {	?that ux:contains ?this.
+?this
+	iq:id	?id;
+	rdfs:label	?label;
+	OPTIONAL {
+		?this rdfs:comment ?comment.
+	}
+	OPTIONAL {
+		?this iq:order		?order.
+	}
+	OPTIONAL {
+		?this iq:type		?type.
+	}
+
+} BINDINGS ?that{ (<{{this}}>) }
+

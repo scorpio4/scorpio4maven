@@ -1,0 +1,14 @@
+SELECT DISTINCT ?this ?classname ?enabled
+WHERE {
+	?that	a	            iq:Application.
+
+	?grant grant:this       ?this.
+	?grant grant:from       ?that.
+
+	?this	a	            iq:Ability.
+    ?this	iq:classname    ?classname.
+
+	OPTIONAL {
+		?this	iq:enabled	?enabled.
+	}
+} BINDINGS ?that { (<{{this}}>) }

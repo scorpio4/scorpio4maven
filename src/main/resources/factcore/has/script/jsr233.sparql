@@ -1,0 +1,4 @@
+SELECT DISTINCT ?that ?this
+WHERE {
+	?that <urn:factcore:script> ?this.
+}

@@ -1,0 +1,29 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:factcore:>.
+@prefix asq:		<urn:factcore:asq:>.
+@prefix : 			<urn:example:asq:>.
+
+#
+# Example ASQ
+#
+
+:demo a asq:Query;
+	rdfs:label		"All Queries";
+
+	asq:where [
+		asq:this	:this;
+		asq:has		rdfs:type;
+		asq:that	asq:Query;
+	];
+	asq:where [
+		asq:this	:this;
+		asq:has		rdfs:label;
+		asq:that	:label;
+	];
+.

@@ -1,0 +1,5 @@
+SELECT ?this (COUNT(?core) as ?cores) ?context WHERE {
+	GRAPH ?context {
+		?this	fact:core 	?core.
+	}
+} GROUP BY ?this ?context

@@ -1,0 +1,7 @@
+SELECT DISTINCT ?this ?header ?body ?footer WHERE {
+	?that	ux:renders ?this.
+	?this
+		ux:header	?header;
+		ux:body		?body;
+		ux:footer	?footer;
+} BINDINGS ?that{ (<{{this}}>) }

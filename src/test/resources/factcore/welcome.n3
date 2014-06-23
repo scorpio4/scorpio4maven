@@ -1,0 +1,7 @@
+@prefix factcore: <http://factcore.com/core/> .
+
+<urn:FactTools:>
+    a                   factcore:Instance;
+    rdfs:label          "Fact Tools";
+.
+

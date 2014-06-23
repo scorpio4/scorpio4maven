@@ -1,0 +1,6 @@
+PREFIX toolchain: 	<http://factcore.com/core/toolchain/>
+
+SELECT DISTINCT ?this ?that WHERE {
+    ?this a ?that.
+    ?that a toolchain:FactCheck.
+}

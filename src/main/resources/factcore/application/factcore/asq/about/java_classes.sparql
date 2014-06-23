@@ -1,0 +1,6 @@
+SELECT DISTINCT ?this ?label ?classname
+WHERE {
+    ?this iq:classname ?classname.
+    ?this rdfs:label ?label.
+}
+ORDER BY ?label

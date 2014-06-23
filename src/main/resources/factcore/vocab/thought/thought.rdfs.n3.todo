@@ -1,0 +1,62 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:factcore:>.
+@prefix thought:	<urn:factcore:thought:>.
+@prefix : 			<urn:factcore:thought:>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"Fact:Core Thoughts";
+	dc:title			"Fact:Core Thought vocabulary";
+	rdfs:comment		"Vocabulary for describing Fact:Core thoughts.";
+	dc:created			"2013-01-30"^^xsd:date;
+	dc:modified			"2013-01-30"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
+.
+
+:Thought
+	a				rdfs:Class;
+	rdfs:comment	"thought";
+	rdfs:label 		"thought";
+.
+
+:this
+	a				rdf:Property ;
+	rdfs:comment	"this" ;
+	rdfs:domain 	:Thought;
+	rdfs:label 		"this";
+	rdfs:range 		rdfs:Class;
+.
+:that
+	a				rdf:Property ;
+	rdfs:comment	"that" ;
+	rdfs:domain 	:Thought;
+	rdfs:label 		"that";
+	rdfs:range 		rdfs:Class;
+.
+:has
+	a				rdf:Property ;
+	rdfs:comment	"has" ;
+	rdfs:domain 	:Thought;
+	rdfs:label 		"has";
+	rdfs:range 		rdfs:Class;
+.
+:is
+	a				rdf:Property ;
+	rdfs:comment	"is" ;
+	rdfs:domain 	:Thought;
+	rdfs:label 		"is";
+	rdfs:range 		rdfs:Class;
+.
+:do
+	a				rdf:Property ;
+	rdfs:comment	"do" ;
+	rdfs:domain 	:Thought;
+	rdfs:label 		"do";
+	rdfs:range 		rdfs:Class;
+.

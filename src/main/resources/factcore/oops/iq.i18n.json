@@ -1,0 +1,5 @@
+{
+    "urn:factcore:iq:oops:api-error": {
+        label: "API Error"
+    }
+}

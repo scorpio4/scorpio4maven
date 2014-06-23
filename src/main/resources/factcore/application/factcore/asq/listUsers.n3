@@ -1,0 +1,37 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:factcore:fact:>.
+@prefix asq:		<urn:factcore:asq:>.
+@prefix iq:			<urn:factcore:>.
+@prefix ux:			<urn:factcore:ux:>.
+@prefix user:       <urn:factcore:user:>.
+@prefix : 			<urn:factcore:application:factcore:asq:listUsers:>.
+
+
+:listViews
+    a               asq:Query;
+	rdfs:label		"All Views";
+
+	asq:where [
+		asq:this	:this;
+		asq:has		rdfs:type;
+		asq:that	user:Agent;
+	];
+	asq:where [
+		asq:this	:this;
+		asq:has		rdfs:label;
+		asq:that	:label;
+	];
+	asq:where [
+		asq:optional "true"^^xsd:boolean;
+
+		asq:this	:this;
+		asq:has		rdfs:comment;
+		asq:that	:comment;
+	];
+.

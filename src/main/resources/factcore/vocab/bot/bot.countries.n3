@@ -1,0 +1,506 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix eg: <http://www.example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix jur: <http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iq: <urn:factcore:> .
+@prefix bot: <urn:factcore:bot:> .
+@prefix : <urn:example:bot:> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#af> <urn:factcore:bot:hears> "Afghanistan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ax> <urn:factcore:bot:hears> "Aland Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#al> <urn:factcore:bot:hears> "Albania"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#dz> <urn:factcore:bot:hears> "Algeria"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#as> <urn:factcore:bot:hears> "American Samoa"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ad> <urn:factcore:bot:hears> "Andorra"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ao> <urn:factcore:bot:hears> "Angola"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ai> <urn:factcore:bot:hears> "Anguilla"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#aq> <urn:factcore:bot:hears> "Antarctica"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ag> <urn:factcore:bot:hears> "Antigua and Barbuda"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ar> <urn:factcore:bot:hears> "Argentina"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#am> <urn:factcore:bot:hears> "Armenia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#aw> <urn:factcore:bot:hears> "Aruba"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#au> <urn:factcore:bot:hears> "Australia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#at> <urn:factcore:bot:hears> "Austria"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#az> <urn:factcore:bot:hears> "Azerbaijan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bs> <urn:factcore:bot:hears> "Bahamas"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bh> <urn:factcore:bot:hears> "Bahrain"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bd> <urn:factcore:bot:hears> "Bangladesh"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bb> <urn:factcore:bot:hears> "Barbados"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#by> <urn:factcore:bot:hears> "Belarus"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#be> <urn:factcore:bot:hears> "Belgium"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bz> <urn:factcore:bot:hears> "Belize"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bj> <urn:factcore:bot:hears> "Benin"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bm> <urn:factcore:bot:hears> "Bermuda"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bt> <urn:factcore:bot:hears> "Bhutan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bo> <urn:factcore:bot:hears> "Bolivia, Plurinational State of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ba> <urn:factcore:bot:hears> "Bosnia and Herzegovina"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bw> <urn:factcore:bot:hears> "Botswana"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bv> <urn:factcore:bot:hears> "Bouvet Island"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#br> <urn:factcore:bot:hears> "Brazil"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#io> <urn:factcore:bot:hears> "British Indian Ocean Territory"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bn> <urn:factcore:bot:hears> "Brunei Darussalam"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bg> <urn:factcore:bot:hears> "Bulgaria"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bf> <urn:factcore:bot:hears> "Burkina Faso"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bi> <urn:factcore:bot:hears> "Burundi"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#kh> <urn:factcore:bot:hears> "Cambodia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cm> <urn:factcore:bot:hears> "Cameroon"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ca> <urn:factcore:bot:hears> "Canada"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cv> <urn:factcore:bot:hears> "Cape Verde"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ky> <urn:factcore:bot:hears> "Cayman Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cf> <urn:factcore:bot:hears> "Central African Republic"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#td> <urn:factcore:bot:hears> "Chad"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cl> <urn:factcore:bot:hears> "Chile"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cn> <urn:factcore:bot:hears> "China"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cx> <urn:factcore:bot:hears> "Christmas Island"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cc> <urn:factcore:bot:hears> "Cocos (Keeling) Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#co> <urn:factcore:bot:hears> "Colombia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#km> <urn:factcore:bot:hears> "Comoros"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cg> <urn:factcore:bot:hears> "Congo"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cd> <urn:factcore:bot:hears> "Congo, the Democratic Republic of the"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ck> <urn:factcore:bot:hears> "Cook Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cr> <urn:factcore:bot:hears> "Costa Rica"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ci> <urn:factcore:bot:hears> "Cote d'Ivoire"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#hr> <urn:factcore:bot:hears> "Croatia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cu> <urn:factcore:bot:hears> "Cuba"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cy> <urn:factcore:bot:hears> "Cyprus"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#cz> <urn:factcore:bot:hears> "Czech Republic"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#dk> <urn:factcore:bot:hears> "Denmark"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#dj> <urn:factcore:bot:hears> "Djibouti"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#dm> <urn:factcore:bot:hears> "Dominica"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#do> <urn:factcore:bot:hears> "Dominican Republic"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ec> <urn:factcore:bot:hears> "Ecuador"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#eg> <urn:factcore:bot:hears> "Egypt"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sv> <urn:factcore:bot:hears> "El Salvador"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gq> <urn:factcore:bot:hears> "Equatorial Guinea"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#er> <urn:factcore:bot:hears> "Eritrea"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ee> <urn:factcore:bot:hears> "Estonia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#et> <urn:factcore:bot:hears> "Ethiopia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#fk> <urn:factcore:bot:hears> "Falkland Islands (Malvinas)"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#fo> <urn:factcore:bot:hears> "Faroe Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#fj> <urn:factcore:bot:hears> "Fiji"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#fi> <urn:factcore:bot:hears> "Finland"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#fr> <urn:factcore:bot:hears> "France"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gf> <urn:factcore:bot:hears> "French Guiana"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pf> <urn:factcore:bot:hears> "French Polynesia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tf> <urn:factcore:bot:hears> "French Southern Territories"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ga> <urn:factcore:bot:hears> "Gabon"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gm> <urn:factcore:bot:hears> "Gambia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ge> <urn:factcore:bot:hears> "Georgia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#de> <urn:factcore:bot:hears> "Germany"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gh> <urn:factcore:bot:hears> "Ghana"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gi> <urn:factcore:bot:hears> "Gibraltar"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gr> <urn:factcore:bot:hears> "Greece"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gl> <urn:factcore:bot:hears> "Greenland"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gd> <urn:factcore:bot:hears> "Grenada"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gp> <urn:factcore:bot:hears> "Guadeloupe"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gu> <urn:factcore:bot:hears> "Guam"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gt> <urn:factcore:bot:hears> "Guatemala"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gg> <urn:factcore:bot:hears> "Guernsey"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gn> <urn:factcore:bot:hears> "Guinea"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gw> <urn:factcore:bot:hears> "Guinea-Bissau"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gy> <urn:factcore:bot:hears> "Guyana"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ht> <urn:factcore:bot:hears> "Haiti"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#hm> <urn:factcore:bot:hears> "Heard Island and McDonald Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#va> <urn:factcore:bot:hears> "Holy See (Vatican City State)"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#hn> <urn:factcore:bot:hears> "Honduras"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#hk> <urn:factcore:bot:hears> "Hong Kong"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#hu> <urn:factcore:bot:hears> "Hungary"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#is> <urn:factcore:bot:hears> "Iceland"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#in> <urn:factcore:bot:hears> "India"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#id> <urn:factcore:bot:hears> "Indonesia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ir> <urn:factcore:bot:hears> "Iran, Islamic Republic of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#iq> <urn:factcore:bot:hears> "Iraq"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ie> <urn:factcore:bot:hears> "Ireland"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#im> <urn:factcore:bot:hears> "Isle of Man"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#il> <urn:factcore:bot:hears> "Israel"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#it> <urn:factcore:bot:hears> "Italy"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#jm> <urn:factcore:bot:hears> "Jamaica"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#jp> <urn:factcore:bot:hears> "Japan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#je> <urn:factcore:bot:hears> "Jersey"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#jo> <urn:factcore:bot:hears> "Jordan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#kz> <urn:factcore:bot:hears> "Kazakhstan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ke> <urn:factcore:bot:hears> "Kenya"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ki> <urn:factcore:bot:hears> "Kiribati"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#kp> <urn:factcore:bot:hears> "Korea, Democratic People's Republic of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#kr> <urn:factcore:bot:hears> "Korea, Republic of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#kw> <urn:factcore:bot:hears> "Kuwait"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#kg> <urn:factcore:bot:hears> "Kyrgyzstan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#la> <urn:factcore:bot:hears> "Lao People's Democratic Republic"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#lv> <urn:factcore:bot:hears> "Latvia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#lb> <urn:factcore:bot:hears> "Lebanon"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ls> <urn:factcore:bot:hears> "Lesotho"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#lr> <urn:factcore:bot:hears> "Liberia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ly> <urn:factcore:bot:hears> "Libyan Arab Jamahiriya"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#li> <urn:factcore:bot:hears> "Liechtenstein"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#lt> <urn:factcore:bot:hears> "Lithuania"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#lu> <urn:factcore:bot:hears> "Luxembourg"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mo> <urn:factcore:bot:hears> "Macao"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mk> <urn:factcore:bot:hears> "Macedonia, the former Yugoslav Republic of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mg> <urn:factcore:bot:hears> "Madagascar"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mw> <urn:factcore:bot:hears> "Malawi"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#my> <urn:factcore:bot:hears> "Malaysia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mv> <urn:factcore:bot:hears> "Maldives"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ml> <urn:factcore:bot:hears> "Mali"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mt> <urn:factcore:bot:hears> "Malta"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mh> <urn:factcore:bot:hears> "Marshall Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mq> <urn:factcore:bot:hears> "Martinique"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mr> <urn:factcore:bot:hears> "Mauritania"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mu> <urn:factcore:bot:hears> "Mauritius"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#yt> <urn:factcore:bot:hears> "Mayotte"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mx> <urn:factcore:bot:hears> "Mexico"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#fm> <urn:factcore:bot:hears> "Micronesia, Federated States of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#md> <urn:factcore:bot:hears> "Moldova, Republic of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mc> <urn:factcore:bot:hears> "Monaco"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mn> <urn:factcore:bot:hears> "Mongolia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#me> <urn:factcore:bot:hears> "Montenegro"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ms> <urn:factcore:bot:hears> "Montserrat"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ma> <urn:factcore:bot:hears> "Morocco"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mz> <urn:factcore:bot:hears> "Mozambique"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mm> <urn:factcore:bot:hears> "Myanmar"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#na> <urn:factcore:bot:hears> "Namibia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#nr> <urn:factcore:bot:hears> "Nauru"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#np> <urn:factcore:bot:hears> "Nepal"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#nl> <urn:factcore:bot:hears> "Netherlands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#an> <urn:factcore:bot:hears> "Netherlands Antilles"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#nc> <urn:factcore:bot:hears> "New Caledonia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#nz> <urn:factcore:bot:hears> "New Zealand"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ni> <urn:factcore:bot:hears> "Nicaragua"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ne> <urn:factcore:bot:hears> "Niger"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ng> <urn:factcore:bot:hears> "Nigeria"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#nu> <urn:factcore:bot:hears> "Niue"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#nf> <urn:factcore:bot:hears> "Norfolk Island"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mp> <urn:factcore:bot:hears> "Northern Mariana Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#no> <urn:factcore:bot:hears> "Norway"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#om> <urn:factcore:bot:hears> "Oman"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pk> <urn:factcore:bot:hears> "Pakistan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pw> <urn:factcore:bot:hears> "Palau"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ps> <urn:factcore:bot:hears> "Palestinian Territory, Occupied"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pa> <urn:factcore:bot:hears> "Panama"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pg> <urn:factcore:bot:hears> "Papua New Guinea"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#py> <urn:factcore:bot:hears> "Paraguay"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pe> <urn:factcore:bot:hears> "Peru"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ph> <urn:factcore:bot:hears> "Philippines"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pn> <urn:factcore:bot:hears> "Pitcairn"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pl> <urn:factcore:bot:hears> "Poland"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pt> <urn:factcore:bot:hears> "Portugal"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pr> <urn:factcore:bot:hears> "Puerto Rico"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#qa> <urn:factcore:bot:hears> "Qatar"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#re> <urn:factcore:bot:hears> "Reunion ﻿ Réunion"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ro> <urn:factcore:bot:hears> "Romania"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ru> <urn:factcore:bot:hears> "Russian Federation"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#rw> <urn:factcore:bot:hears> "Rwanda"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#bl> <urn:factcore:bot:hears> "Saint Barthélemy"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sh> <urn:factcore:bot:hears> "Saint Helena"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#kn> <urn:factcore:bot:hears> "Saint Kitts and Nevis"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#lc> <urn:factcore:bot:hears> "Saint Lucia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#mf> <urn:factcore:bot:hears> "Saint Martin (French part)"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#pm> <urn:factcore:bot:hears> "Saint Pierre and Miquelon"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#vc> <urn:factcore:bot:hears> "Saint Vincent and the Grenadines"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ws> <urn:factcore:bot:hears> "Samoa"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sm> <urn:factcore:bot:hears> "San Marino"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#st> <urn:factcore:bot:hears> "Sao Tome and Principe"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sa> <urn:factcore:bot:hears> "Saudi Arabia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sn> <urn:factcore:bot:hears> "Senegal"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#rs> <urn:factcore:bot:hears> "Serbia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sc> <urn:factcore:bot:hears> "Seychelles"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sl> <urn:factcore:bot:hears> "Sierra Leone"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sg> <urn:factcore:bot:hears> "Singapore"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sk> <urn:factcore:bot:hears> "Slovakia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#si> <urn:factcore:bot:hears> "Slovenia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sb> <urn:factcore:bot:hears> "Solomon Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#so> <urn:factcore:bot:hears> "Somalia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#za> <urn:factcore:bot:hears> "South Africa"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gs> <urn:factcore:bot:hears> "South Georgia and the South Sandwich Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#es> <urn:factcore:bot:hears> "Spain"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#lk> <urn:factcore:bot:hears> "Sri Lanka"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sd> <urn:factcore:bot:hears> "Sudan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sr> <urn:factcore:bot:hears> "Suriname"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sj> <urn:factcore:bot:hears> "Svalbard and Jan Mayen"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sz> <urn:factcore:bot:hears> "Swaziland"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#se> <urn:factcore:bot:hears> "Sweden"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ch> <urn:factcore:bot:hears> "Switzerland"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#sy> <urn:factcore:bot:hears> "Syrian Arab Republic"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tw> <urn:factcore:bot:hears> "Taiwan, Province of China"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tj> <urn:factcore:bot:hears> "Tajikistan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tz> <urn:factcore:bot:hears> "Tanzania, United Republic of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#th> <urn:factcore:bot:hears> "Thailand"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tl> <urn:factcore:bot:hears> "Timor-Leste"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tg> <urn:factcore:bot:hears> "Togo"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tk> <urn:factcore:bot:hears> "Tokelau"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#to> <urn:factcore:bot:hears> "Tonga"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tt> <urn:factcore:bot:hears> "Trinidad and Tobago"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tn> <urn:factcore:bot:hears> "Tunisia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tr> <urn:factcore:bot:hears> "Turkey"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tm> <urn:factcore:bot:hears> "Turkmenistan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tc> <urn:factcore:bot:hears> "Turks and Caicos Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#tv> <urn:factcore:bot:hears> "Tuvalu"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ug> <urn:factcore:bot:hears> "Uganda"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ua> <urn:factcore:bot:hears> "Ukraine"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ae> <urn:factcore:bot:hears> "United Arab Emirates"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#gb> <urn:factcore:bot:hears> "United Kingdom"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#us> <urn:factcore:bot:hears> "United States"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#um> <urn:factcore:bot:hears> "United States Minor Outlying Islands"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#uy> <urn:factcore:bot:hears> "Uruguay"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#uz> <urn:factcore:bot:hears> "Uzbekistan"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#vu> <urn:factcore:bot:hears> "Vanuatu"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ve> <urn:factcore:bot:hears> "Venezuela, Bolivarian Republic of"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#vn> <urn:factcore:bot:hears> "Viet Nam"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#vg> <urn:factcore:bot:hears> "Virgin Islands, British"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#vi> <urn:factcore:bot:hears> "Virgin Islands, U.S."@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#wf> <urn:factcore:bot:hears> "Wallis and Futuna"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#eh> <urn:factcore:bot:hears> "Western Sahara"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#ye> <urn:factcore:bot:hears> "Yemen"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#zm> <urn:factcore:bot:hears> "Zambia"@en .
+
+<http://eulersharp.sourceforge.net/2003/03swap/countries#zw> <urn:factcore:bot:hears> "Zimbabwe"@en .

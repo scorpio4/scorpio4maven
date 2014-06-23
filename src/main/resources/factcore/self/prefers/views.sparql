@@ -1,0 +1,9 @@
+#
+# User preferences
+#
+SELECT DISTINCT ?this ?label WHERE {
+	?I	user:prefers	?this.
+	?this
+		a			ux:View;
+		rdfs:label	?label.
+} BINDINGS ?I { (<{{I}}>) }

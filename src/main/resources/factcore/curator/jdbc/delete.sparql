@@ -1,0 +1,6 @@
+DELETE {
+	?this ?p ?o
+} WHERE {
+	?this rdfs:isDefinedBy <{{focus}}>;
+		?p ?o.
+}
