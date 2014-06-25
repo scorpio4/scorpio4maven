@@ -62,6 +62,9 @@ public class CheckFactsMojo extends MavenMojo {
 
         Collection<Map> fatals = sesameCRUD.read("mojo/fatalchecks", getProject().getProperties());
         if (!fatals.isEmpty()) {
+	        for(Map fatal: fatals) {
+		        getLog().error("Check Failed: "+fatal);
+	        }
             throw new MojoFailureException("FATAL: " + fatals.size()+ " statements");
         }
     }
