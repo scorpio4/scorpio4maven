@@ -13,8 +13,8 @@
 	rdfs:label			"Mail";
 	dc:title			"Mail vocabulary";
 	rdfs:comment		"Vocabulary for describing Email.";
-	dc:created			"2013-03-1"^^xsd:date;
-	dc:modified			"2013-03-1"^^xsd:date;
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
 	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
 .
 

@@ -18,8 +18,8 @@
 	rdfs:label			"User";
 	dc:title			"User vocabulary";
 	rdfs:comment		"Vocabulary for describing Fact:Core Users";
-	dc:created			"2013-03-1"^^xsd:date;
-	dc:modified			"2013-03-1"^^xsd:date;
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
 	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
 .
 

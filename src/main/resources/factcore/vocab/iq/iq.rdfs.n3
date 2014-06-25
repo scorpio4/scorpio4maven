@@ -16,8 +16,8 @@
 	rdfs:label			"IQ";
 	dc:title			"IQ vocabulary";
 	rdfs:comment		"Vocabulary for describing IQ Behaviour.";
-	dc:created			"2013-03-1"^^xsd:date;
-	dc:modified			"2013-03-1"^^xsd:date;
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
 	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>;
     fab:feature         "Contextual Knowledge Engine";
     fab:benefit         "Create, organise, categorise, link, share your data, information and knowledge. Add rules, workflows, triggers or scripts to make it smarter. Then share your wisdom with your friends, family and colleague.";

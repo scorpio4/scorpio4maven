@@ -3,9 +3,7 @@ package com.factcore.mojo;
 import com.factcore.assets.AssetRegisters;
 import com.factcore.deploy.SesameDeployer;
 import com.factcore.vendor.camel.RDFRoutePlanner;
-import com.factcore.vendor.camel.component.CRUDComponent;
-import com.factcore.vendor.camel.component.CoreComponent;
-import com.factcore.vendor.camel.component.SelfComponent;
+import com.factcore.vendor.camel.component.*;
 import com.factcore.vendor.sesame.crud.SesameCRUD;
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
@@ -67,6 +65,8 @@ public class CamelAPIMojo extends MavenMojo {
 		camel.addComponent("self", new SelfComponent(this));
 		camel.addComponent("crud", new CRUDComponent(crud));
 		camel.addComponent("core", new CoreComponent(getFactSpace(), assetRegister ));
+		camel.addComponent("any23", new Any23Component());
+		camel.addComponent("sparql", new SesameComponent(getConnection()));
 
 //		jndi.bind("self", this);
 		getLog().info("API bound " + beans.size() + " beans in: " + stopWatch.toString());

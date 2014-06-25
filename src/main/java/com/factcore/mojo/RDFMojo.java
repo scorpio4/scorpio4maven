@@ -29,7 +29,9 @@ public class RDFMojo extends MavenMojo {
     public void executeInternal() throws FactException, IOException, RepositoryException {
         getLog().info("Loading RDF: " + getSrcPath().getAbsolutePath());
 
+	    getConnection().begin();
         getConnection().clear();
+	    getConnection().commit();
 
         SesameDeployer sesameDeployer = new SesameDeployer(getFactSpace());
         sesameDeployer.setDeployRDF(true);

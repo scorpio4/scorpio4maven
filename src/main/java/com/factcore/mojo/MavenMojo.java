@@ -6,6 +6,7 @@ import com.factcore.assets.AssetRegisters;
 import com.factcore.fact.FactSpace;
 import com.factcore.util.Stopwatch;
 import com.factcore.util.map.MapUtil;
+import com.factcore.vendor.sesame.RepositoryManager;
 import com.factcore.vendor.sesame.store.NativeRDFSRepository;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -14,10 +15,12 @@ import org.apache.maven.project.MavenProject;
 import org.openrdf.repository.Repository;
 import org.openrdf.repository.RepositoryConnection;
 import org.openrdf.repository.RepositoryException;
+import org.openrdf.repository.config.RepositoryConfigException;
 import org.openrdf.repository.http.HTTPRepository;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Hashtable;
 import java.util.Map;
 
@@ -43,11 +46,12 @@ public abstract class MavenMojo extends AbstractMojo {
     protected Repository repository = null;
     protected RepositoryConnection connection = null;
     protected AssetRegister assetRegister;
+	protected RepositoryManager repositoryManager;
 
-    public MavenMojo() {
+	public MavenMojo() {
     }
 
-    public void initialize() throws MojoFailureException, RepositoryException {
+    public void initialize() throws MojoFailureException, RepositoryException, MalformedURLException, RepositoryConfigException {
         Hashtable properties = project.getProperties();
         this.identity = MapUtil.getString(properties, "factcore.id", null);
         if (this.identity==null) throw new MojoFailureException("Missing <factcore.id>");
@@ -60,9 +64,12 @@ public abstract class MavenMojo extends AbstractMojo {
         initializeRepository();
     }
 
-    protected void initializeRepository() throws RepositoryException {
-        this.repository = newLocalRepository();
+    protected void initializeRepository() throws RepositoryException, MalformedURLException, RepositoryConfigException {
+	    this.repositoryManager = new RepositoryManager(getTempPath());
+	    this.repository = repositoryManager.getRepository(getIdentity());
+//	    this.repository = newLocalRepository();
         this.connection = repository.getConnection();
+	    getLog().info("Repository: "+getIdentity()+" @ "+getTempPath());
         this.assetRegister = new AssetRegisters(connection);
     }
 
