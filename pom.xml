@@ -4,16 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>factcore</groupId>
+    <parent>
+        <groupId>scorpio4</groupId>
+        <artifactId>scorpio4master</artifactId>
+        <version>0.02-SNAPSHOT</version>
+    </parent>
+
     <artifactId>FactTools</artifactId>
-    <version>0.37-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <name>FactTools</name>
     <organization>
         <name>Fact:Core</name>
     </organization>
-    <url>http://www.factcore.com</url>
+    <url>http://www.com.factcore.com</url>
 
     <developers>
         <developer>
@@ -35,31 +39,8 @@
     </scm>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.build.directory>deploy</project.build.directory>
-        <project.webapp.directory>src/main/resources/www/</project.webapp.directory>
-
-        <!-- dependency versions -->
-        <spring.version>3.1.2.RELEASE</spring.version>
-        <slf4j.version>1.6.6</slf4j.version>
-        <camel.version>2.13.1</camel.version>
-        <sesame.version>2.7.11</sesame.version>
-
-        <groovy.version>2.0.1</groovy.version>
-        <groovy-eclipse-compiler.version>2.8.0-01</groovy-eclipse-compiler.version>
-        <groovy-eclipse-batch.version>2.1.8-01</groovy-eclipse-batch.version>
-
-        <factcore.id>urn:${project.name}:</factcore.id>
-
-        <factcore.src.path>src/test/resources/factcore/</factcore.src.path>
-        <factcore.resources.path>src/test/resources/factcore/</factcore.resources.path>
-        <factcore.target.path>build/target/</factcore.target.path>
-        <factcore.temp.path>build/temp/</factcore.temp.path>
-
-        <factcore.sandbox.host>http://127.0.0.1:8080/openrdf-sesame/</factcore.sandbox.host>
-        <factcore.sandbox.name>${project.name}</factcore.sandbox.name>
-
     </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -134,9 +115,9 @@
     <dependencies>
 
         <dependency>
-            <groupId>factcore</groupId>
+            <groupId>scorpio4</groupId>
             <artifactId>Common</artifactId>
-            <version>0.25-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
 
         <!-- Apache Camel (Graph-based Integration & Workflow) -->

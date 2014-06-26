@@ -23,7 +23,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-public class RDFMojo extends MavenMojo {
+public class RDFMojo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, IOException, RepositoryException {

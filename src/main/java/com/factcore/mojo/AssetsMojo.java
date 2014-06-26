@@ -24,7 +24,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-public class AssetsMojo extends MavenMojo {
+public class AssetsMojo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException {

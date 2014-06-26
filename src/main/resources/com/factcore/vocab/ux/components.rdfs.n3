@@ -1,0 +1,115 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix iq:			<urn:com.factcore:>.
+@prefix ux:			<urn:com.factcore:ux:>.
+@prefix : 			<urn:com.factcore:ux:>.
+
+:Text
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Text";
+	rdfs:comment 		"Text Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+
+:Password
+	rdfs:subClassOf		:Text;
+	rdfs:label			"Password";
+	rdfs:comment 		"Password Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:TextArea
+	rdfs:subClassOf		:Text;
+	rdfs:label			"TextArea";
+	rdfs:comment 		"TextArea Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:HTML
+	rdfs:subClassOf		:TextArea;
+	rdfs:label			"HTML";
+	rdfs:comment 		"HTML Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+
+:Number
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Number";
+	rdfs:comment 		"Number Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:Checkbox
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Checkbox";
+	rdfs:comment 		"Checkbox Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:Hidden
+	rdfs:subClassOf		:Component;
+	rdfs:label			"Hidden";
+	rdfs:comment 		"Hidden Field";
+	rdfs:isDefinedBy	:;
+.
+:Select
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Select";
+	rdfs:comment 		"Select Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:Radio
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Radio";
+	rdfs:comment 		"Radio Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:Object
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Object";
+	rdfs:comment 		"Object Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:Tree
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Tree";
+	rdfs:comment 		"Tree Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:Date
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Date";
+	rdfs:comment 		"Date Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:DateTime
+	rdfs:subClassOf		:Date;
+	rdfs:subClassOf		:Time;
+	rdfs:label			"DateTime";
+	rdfs:comment 		"DateTime Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:Time
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Time";
+	rdfs:comment 		"Time Formatter & Editor";
+	rdfs:isDefinedBy	:;
+.
+:List
+	rdfs:subClassOf		:Component;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"List";
+	rdfs:comment 		"List Editor";
+	rdfs:isDefinedBy	:;
+.

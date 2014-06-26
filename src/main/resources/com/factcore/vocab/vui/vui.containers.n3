@@ -1,0 +1,67 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix iq:			<urn:com.factcore:>.
+@prefix vui:		<urn:com.factcore:vui:>.
+@prefix : 			<urn:com.factcore:vui:>.
+
+:Panel
+    rdfs:subClassOf :Container;
+    rdfs:label      "Panel";
+    rdfs:comment    "A VUI panel";
+    iq:classname    "com.vaadin.ui.Panel";
+	rdfs:isDefinedBy	:;
+.
+
+:CssLayout
+    rdfs:subClassOf     :Layout;
+	rdfs:label			"CSS";
+	rdfs:comment 		"A VUI CSS Layout";
+    iq:classname    "com.vaadin.ui.CssLayout";
+	rdfs:isDefinedBy	:;
+.
+
+:VerticalLayout
+    rdfs:subClassOf     :Layout;
+	rdfs:label			"Vertical";
+	rdfs:comment 		"A VUI Vertical Layout";
+    iq:classname    "com.vaadin.ui.VerticalLayout";
+	rdfs:isDefinedBy	:;
+.
+
+:HorizontalLayout
+    rdfs:subClassOf     :Layout;
+	rdfs:label			"Horizontal";
+	rdfs:comment 		"A VUI Horizontal Layout";
+	rdfs:isDefinedBy	:;
+    iq:classname        "com.vaadin.ui.HorizontalLayout";
+.
+
+:Window
+    rdfs:subClassOf :Container;
+    rdfs:label      "Window";
+    rdfs:comment    "A VUI window";
+    iq:classname    "com.vaadin.ui.Window";
+	rdfs:isDefinedBy	:;
+.
+
+:VerticalSplitPanel
+    rdfs:subClassOf     :SplitPanel;
+	rdfs:label			"Vertical";
+	rdfs:comment 		"A VUI Vertical SplitPanel";
+    iq:classname        "com.vaadin.ui.VerticalSplitPanel";
+	rdfs:isDefinedBy	:;
+.
+
+:HorizontalSplitPanel
+    rdfs:subClassOf     :SplitPanel;
+	rdfs:label			"Horizontal";
+	rdfs:comment 		"A VUI Horizontal SplitPanel";
+    iq:classname        "com.vaadin.ui.HorizontalSplitPanel";
+	rdfs:isDefinedBy	:;
+.

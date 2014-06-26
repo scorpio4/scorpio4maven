@@ -1,0 +1,46 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix iq:			<urn:com.factcore:>.
+@prefix ux:			<urn:com.factcore:ux:>.
+@prefix : 			<urn:example:ux:>.
+
+<bean:com.com.factcore.learn.DocumentCurator>
+    a               fact:Curator;
+    rdfs:label      "Document Curator";
+.
+
+<bean:com.com.factcore.learn.schema.XLSCurator>
+    a               fact:Curator;
+    rdfs:label      "Excel Curator";
+.
+
+<bean:com.com.factcore.learn.schema.JDBCCurator>
+    a               fact:Curator;
+    rdfs:label      "Database Curator";
+.
+
+<bean:com.com.factcore.learn.schema.BeanCurator>
+    a               fact:Curator;
+    rdfs:label      "Java Curator";
+.
+
+<bean:com.com.factcore.learn.EmailCurator>
+    a               fact:Curator;
+    rdfs:label      "Email Curator";
+.
+
+<bean:com.com.factcore.learn.FileSystemCurator>
+    a               fact:Curator;
+    rdfs:label      "File System Curator";
+.
+
+<bean:com.com.factcore.learn.WebBugCurator>
+    a               fact:Curator;
+    rdfs:label      "Web Bug Curator";
+.

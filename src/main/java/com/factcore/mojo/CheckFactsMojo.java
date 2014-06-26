@@ -34,7 +34,7 @@ import java.util.Map;
  * @phase process-sources
  */
 
-public class CheckFactsMojo extends MavenMojo {
+public class CheckFactsMojo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, QueryEvaluationException, MalformedQueryException, MojoExecutionException, MojoFailureException {

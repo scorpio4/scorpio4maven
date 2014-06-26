@@ -28,7 +28,7 @@ import java.util.Map;
  * @phase process-sources
  */
 
-public class CamelAPIMojo extends MavenMojo {
+public class CamelAPIMojo extends BaseFactToolsMojo {
 	boolean running = true;
 
 	@Override

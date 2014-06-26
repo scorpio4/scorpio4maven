@@ -32,7 +32,7 @@ import java.util.concurrent.Future;
  * @requiresProject true
  * @phase process-sources
  */
-public class ExecutorMojo extends MavenMojo {
+public class ExecutorMojo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, ExecutionException, IQException, InterruptedException, AssetNotSupported {

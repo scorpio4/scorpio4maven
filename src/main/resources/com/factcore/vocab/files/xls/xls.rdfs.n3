@@ -1,0 +1,130 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix iq:			<urn:com.factcore:>.
+@prefix ux:			<urn:com.factcore:ux:>.
+
+@prefix xls: 		<urn:com.factcore:curator:xls:>.
+@prefix : 			<urn:com.factcore:curator:xls:>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1"@en;
+	rdfs:label			"Excel Sheet System"@en;
+	dc:title			"Excel Sheet vocabulary"@en;
+	rdfs:comment		"Vocabulary for describing Excel Sheets."@en;
+	dc:created			"2013-10-20"^^xsd:date;
+	dc:modified			"2013-10-20"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
+.
+
+
+:WorkBook
+    rdfs:label      "Collection of Spreadsheets";
+.
+
+:Sheet
+    rdfs:label      "Spreadsheet";
+.
+
+:SheetRange
+    rdfs:label      "Spreadsheet Range";
+.
+
+:Cell
+    rdfs:label      "Cell";
+.
+
+:Row
+    rdfs:label      "Row";
+.
+
+:Column
+    rdfs:label      "Column";
+.
+
+:Alignment
+    rdfs:label      "Alignment";
+.
+
+:hasSheet
+    a               owl:ObjectProperty;
+    rdfs:label      "has sheet";
+    rdfs:domain     :WorkBook;
+    rdfs:range      :Sheet;
+.
+
+:hasRange
+    a               owl:ObjectProperty;
+    rdfs:label      "named range";
+    rdfs:domain     :WorkBook;
+    rdfs:range      :SheetRange;
+.
+
+:hasCell
+    a               owl:ObjectProperty;
+    rdfs:label      "cell";
+    rdfs:domain     :Sheet;
+    rdfs:range      :Cell;
+.
+
+:hasColumn
+    a               owl:ObjectProperty;
+    rdfs:label      "column";
+    rdfs:domain     :Cell;
+    rdfs:range      :Column;
+.
+
+:hasRow
+    a               owl:ObjectProperty;
+    rdfs:label      "row";
+    rdfs:domain     :Cell;
+    rdfs:range      :Row;
+.
+
+:hasValue
+    a               owl:DatatypeProperty;
+    rdfs:label      "value";
+    rdfs:domain     :Cell;
+    rdfs:range      xsd:simpleType;
+.
+
+:alignment
+    a               owl:DatatypeProperty;
+    rdfs:label      "alignment";
+    rdfs:domain     :Cell;
+    rdfs:range      :Alignment;
+.
+
+:format
+    a               owl:DatatypeProperty;
+    rdfs:label      "format";
+    rdfs:domain     :Cell;
+    rdfs:range      xsd:string;
+.
+
+:formula
+    a               owl:DatatypeProperty;
+    rdfs:label      "formula";
+    rdfs:domain     :Cell;
+    rdfs:range      xsd:string;
+.
+
+:locked
+    a               owl:DatatypeProperty;
+    rdfs:label      "locked";
+    rdfs:domain     :Cell;
+    rdfs:range      xsd:boolean;
+.
+
+:hidden
+    a               owl:DatatypeProperty;
+    rdfs:label      "hidden";
+    rdfs:domain     :Cell;
+    rdfs:range      xsd:boolean;
+.
+

@@ -1,0 +1,46 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix iq:			<urn:com.factcore:>.
+@prefix ux:			<urn:com.factcore:ux:>.
+@prefix : 			<urn:com.factcore:application:com.factcore:ux:canvas2d:>.
+
+#
+# Example Canvas2D
+#
+
+:
+    rdfs:label      "2D Canvas Demo";
+    ux:renders      [
+        ux:body "<div><label>{{label}}</label><p>{{comment}}</p></div>";
+    ];
+    ux:views        ux:Grid;
+
+    ux:position     [
+        ux:this     :demo1_1;
+        ux:x        "0"^^xsd:integer;
+        ux:y        "0"^^xsd:integer;
+    ];
+    ux:position [
+        ux:this     :demo1_2;
+        ux:x        "200"^^xsd:integer;
+        ux:y        "100"^^xsd:integer;
+    ];
+
+    ux:zx           "10"^^xsd:integer;
+    ux:zy           "10"^^xsd:integer;
+
+.
+
+:demo1_1
+    rdfs:label  "Demo 1.1";
+.
+
+:demo1_2
+    rdfs:label  "Demo 1.2";
+.

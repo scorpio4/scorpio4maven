@@ -30,7 +30,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-public class DumpMojo extends MavenMojo {
+public class DumpMojo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, QueryEvaluationException, MalformedQueryException, RDFHandlerException {

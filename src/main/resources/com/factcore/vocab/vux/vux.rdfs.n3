@@ -1,0 +1,57 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix iq:			<urn:com.factcore:>.
+@prefix vui:		<urn:com.factcore:vui:>.
+@prefix asq:		<urn:com.factcore:asq:>.
+@prefix vux:		<urn:com.factcore:vux:>.
+@prefix : 			<urn:com.factcore:vux:>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"VUX";
+	dc:title			"VUX vocabulary";
+	rdfs:comment		"Vocabulary for describing a User Experience.";
+	dc:created			"2013-01-30"^^xsd:date;
+	dc:modified			"2013-01-30"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
+.
+
+
+:UX
+    rdfs:label      "User Experience";
+    rdfs:comment    "A view, model and behaviour";
+	rdfs:isDefinedBy	:;
+.
+
+:models
+    a               owl:ObjectProperty;
+    rdfs:label      "model";
+    rdfs:comment    "A model describes structured data";
+    rdfs:domain     :UX;
+    rdfs:range      asq:Query;
+	rdfs:isDefinedBy	:;
+.
+
+:views
+    a               owl:ObjectProperty;
+    rdfs:label      "view";
+    rdfs:comment    "visualises your data";
+    rdfs:domain     :UX;
+    rdfs:range      vui:Component;
+	rdfs:isDefinedBy	:;
+.
+
+:controls
+    a               owl:ObjectProperty;
+    rdfs:label      "behaviour";
+    rdfs:comment    "Any business logic and rules";
+    rdfs:domain     :UX;
+    rdfs:range      iq:Behaviour;
+	rdfs:isDefinedBy	:;
+.

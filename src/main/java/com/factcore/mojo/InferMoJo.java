@@ -30,7 +30,7 @@ import java.util.Map;
  * @requiresProject true
  * @phase process-sources
  */
-public class InferMoJo extends MavenMojo{
+public class InferMoJo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, MalformedQueryException, QueryEvaluationException {

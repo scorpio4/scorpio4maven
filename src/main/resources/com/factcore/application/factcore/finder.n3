@@ -1,0 +1,44 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.factcore:>.
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix can:		<urn:com.factcore:can:>.
+@prefix script:		<urn:com.factcore:script:>.
+@prefix asq:		<urn:com.factcore:asq:>.
+@prefix nms:	 	<urn:com.factcore:nms:>.
+@prefix ux:	 		<urn:com.factcore:ux:>.
+@prefix user:	 	<urn:com.factcore:user:>.
+@prefix : 			<urn:com.factcore:application:com.factcore:finder:>.
+
+
+# Fact Finders
+
+:core
+	a				fact:Finder;
+	fact:id			"core";
+	rdfs:label 		"Fact:Core Core";
+	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/example>;
+	iq:classname 	"com.com.factcore.vendor.sesame.source.SesameFactSource";
+.
+
+:models
+	a				fact:Finder;
+	fact:id			"models";
+	rdfs:label 		"Fact:Core Models";
+	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/example>;
+	iq:classname 	"com.com.factcore.vendor.sesame.source.SesameFactSource";
+.
+
+:emails
+	a				fact:Finder;
+	fact:id			"emails";
+	rdfs:label 		"Fact:Core Email";
+	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/lee>;
+	iq:classname 	"com.com.factcore.vendor.sesame.source.SesameFactSource";
+.
+

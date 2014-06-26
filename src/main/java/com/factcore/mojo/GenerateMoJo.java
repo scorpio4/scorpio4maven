@@ -22,7 +22,7 @@ import java.util.Map;
  * @requiresProject true
  * @phase process-sources
  */
-public class GenerateMoJo extends MavenMojo {
+public class GenerateMoJo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException {

@@ -26,7 +26,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-public class InitializeMojo extends MavenMojo {
+public class InitializeMojo extends BaseFactToolsMojo {
 
     protected void initializeRepository() throws RepositoryException {
     }

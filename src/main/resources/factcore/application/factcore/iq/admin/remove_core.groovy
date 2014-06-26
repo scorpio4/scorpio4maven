@@ -1,1 +1,0 @@
-package factcore.application.factcore.iq.admin

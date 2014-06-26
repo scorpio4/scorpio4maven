@@ -1,0 +1,65 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.factcore:>.
+@prefix script:		<urn:com.factcore:script:>.
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix : 			<urn:com.factcore:>.
+
+
+#
+# Situational Awareness
+#
+
+:Situation
+     # Analogous to an MVC System / Situational Awareness Telemetry
+	rdfs:isDefinedBy	:;
+	rdfs:subClassOf		:Doer;
+	rdfs:label			"Situation";
+	rdfs:comment 		"Collection of Awareness";
+.
+
+:Awareness
+    # Analogous to a Controller / expresses Agency
+	rdfs:isDefinedBy	:;
+	rdfs:label			"Awareness";
+	rdfs:comment 		"Awareness trigger Behaviours";
+.
+
+:for
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"for";
+	rdfs:comment		"Iterates each result";
+	rdfs:domain			:AbstractAwareness;
+	rdfs:range			:Query;
+.
+
+:aware
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"plans";
+	rdfs:comment		"Plans IQ";
+	rdfs:domain			:Situation;
+	rdfs:range			:Awareness;
+.
+
+:from
+	rdfs:subPropertyOf	iq:do;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"from";
+	rdfs:comment		"Awareness produces Behaviour";
+	rdfs:domain			:Awareness;
+	rdfs:range			:Behaviour;
+.
+:to
+	rdfs:subPropertyOf	iq:do;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"to";
+	rdfs:comment		"Behaviour produces Behaviour";
+	rdfs:domain			:Behaviour;
+	rdfs:range  		:Behaviour;
+.
+

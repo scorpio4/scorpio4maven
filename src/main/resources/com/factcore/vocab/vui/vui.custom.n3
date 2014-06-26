@@ -1,0 +1,67 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.factcore:fact:>.
+@prefix iq:			<urn:com.factcore:>.
+@prefix vui:		<urn:com.factcore:vui:>.
+@prefix : 			<urn:com.factcore:vui:>.
+
+:IconicMenu
+    rdfs:subClassOf :Component;
+    rdfs:label      "Iconic Menu";
+    rdfs:comment    "A VUI editor";
+    iq:classname    "com.com.factcore.vendor.vaadin.ui.menu.IconicMenu";
+	rdfs:isDefinedBy	:;
+.
+
+:TabbedEditor
+    rdfs:subClassOf :Component;
+    rdfs:label      "Tabbed Editor";
+    rdfs:comment    "A VUI tabbed editor";
+    iq:classname    "com.com.factcore.vendor.vaadin.ui.menu.TabbedEditor";
+	rdfs:isDefinedBy	:;
+.
+
+:UserProfile
+    rdfs:subClassOf :Component;
+    rdfs:label      "User Profile";
+    rdfs:comment    "A VUI user profile";
+    iq:classname    "com.com.factcore.vendor.vaadin.ui.menu.UserProfile";
+	rdfs:isDefinedBy	:;
+.
+
+:Uploader
+    rdfs:subClassOf :Component;
+    rdfs:label      "User Profile";
+    rdfs:comment    "A VUI user profile";
+    iq:classname    "com.com.factcore.vendor.vaadin.ui.rich.Uploader";
+	rdfs:isDefinedBy	:;
+.
+
+:NotifyButton
+    rdfs:subClassOf :Component;
+    rdfs:label      "User Profile";
+    rdfs:comment    "A VUI user profile";
+    iq:classname    "com.com.factcore.vendor.vaadin.ui.rich.Uploader";
+	rdfs:isDefinedBy	:;
+.
+
+:RichTextEditor
+    rdfs:subClassOf :Component;
+    rdfs:label      "Rich Text Editor";
+    rdfs:comment    "A VUI Rich Text Editor";
+    iq:classname    "com.com.factcore.vendor.vaadin.ui.rich.RichTextEditor";
+	rdfs:isDefinedBy	:;
+.
+
+:Grid
+    rdfs:subClassOf :Table;
+    rdfs:label      "Grid";
+    rdfs:comment    "A VUI editable grid";
+    iq:classname    "com.com.factcore.vendor.vaadin.ui.rich.Grid";
+	rdfs:isDefinedBy	:;
+.

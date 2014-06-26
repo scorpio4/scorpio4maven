@@ -30,7 +30,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-public class UploadMojo extends MavenMojo {
+public class UploadMojo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, QueryEvaluationException, MalformedQueryException {
