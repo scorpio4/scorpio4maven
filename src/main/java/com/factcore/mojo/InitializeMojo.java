@@ -1,7 +1,7 @@
 package com.factcore.mojo;
 
 import com.factcore.assets.AssetRegisters;
-import com.factcore.deploy.SesameDeployer;
+import com.factcore.deploy.Scorpio4SesameDeployer;
 import com.factcore.oops.FactException;
 import org.apache.commons.io.FileUtils;
 import org.openrdf.repository.RepositoryException;
@@ -41,8 +41,8 @@ public class InitializeMojo extends BaseFactToolsMojo {
             repository = newLocalRepository();
             connection = repository.getConnection();
             this.assetRegister = new AssetRegisters(connection);
-            SesameDeployer sesameDeployer = new SesameDeployer(getFactSpace());
-            sesameDeployer.clean();
+            Scorpio4SesameDeployer scorpio4SesameDeployer = new Scorpio4SesameDeployer(getFactSpace());
+            scorpio4SesameDeployer.clean();
 
             File path = getResourcesPath();
             path.mkdirs();

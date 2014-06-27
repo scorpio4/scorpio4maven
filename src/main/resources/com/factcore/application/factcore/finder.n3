@@ -23,7 +23,7 @@
 	fact:id			"core";
 	rdfs:label 		"Fact:Core Core";
 	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/example>;
-	iq:classname 	"com.com.factcore.vendor.sesame.source.SesameFactSource";
+	iq:classname 	"com.factcore.vendor.sesame.source.SesameFactSource";
 .
 
 :models
@@ -31,7 +31,7 @@
 	fact:id			"models";
 	rdfs:label 		"Fact:Core Models";
 	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/example>;
-	iq:classname 	"com.com.factcore.vendor.sesame.source.SesameFactSource";
+	iq:classname 	"com.factcore.vendor.sesame.source.SesameFactSource";
 .
 
 :emails
@@ -39,6 +39,6 @@
 	fact:id			"emails";
 	rdfs:label 		"Fact:Core Email";
 	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/lee>;
-	iq:classname 	"com.com.factcore.vendor.sesame.source.SesameFactSource";
+	iq:classname 	"com.factcore.vendor.sesame.source.SesameFactSource";
 .
 

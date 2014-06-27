@@ -10,37 +10,37 @@
 @prefix ux:			<urn:com.factcore:ux:>.
 @prefix : 			<urn:example:ux:>.
 
-<bean:com.com.factcore.learn.DocumentCurator>
+<bean:com.factcore.learn.DocumentCurator>
     a               fact:Curator;
     rdfs:label      "Document Curator";
 .
 
-<bean:com.com.factcore.learn.schema.XLSCurator>
+<bean:com.factcore.learn.schema.XLSCurator>
     a               fact:Curator;
     rdfs:label      "Excel Curator";
 .
 
-<bean:com.com.factcore.learn.schema.JDBCCurator>
+<bean:com.factcore.learn.schema.JDBCCurator>
     a               fact:Curator;
     rdfs:label      "Database Curator";
 .
 
-<bean:com.com.factcore.learn.schema.BeanCurator>
+<bean:com.factcore.learn.schema.BeanCurator>
     a               fact:Curator;
     rdfs:label      "Java Curator";
 .
 
-<bean:com.com.factcore.learn.EmailCurator>
+<bean:com.factcore.learn.EmailCurator>
     a               fact:Curator;
     rdfs:label      "Email Curator";
 .
 
-<bean:com.com.factcore.learn.FileSystemCurator>
+<bean:com.factcore.learn.FileSystemCurator>
     a               fact:Curator;
     rdfs:label      "File System Curator";
 .
 
-<bean:com.com.factcore.learn.WebBugCurator>
+<bean:com.factcore.learn.WebBugCurator>
     a               fact:Curator;
     rdfs:label      "Web Bug Curator";
 .

@@ -37,7 +37,7 @@
 #		rdfs:label	"SNMP Poller";
 #		iq:for		nms:ExampleHosts;
 #		iq:from		<snmp:{{ipv4}}:161?protocol=udp&snmpCommunity=public&type=POLL&oids=1.3.6.1.2.1.1.4.0>;
-#		iq:to		<log:com.com.factcore.example.app.hello?level=DEBUG>;
+#		iq:to		<log:com.factcore.example.app.hello?level=DEBUG>;
 #	];
 .
 

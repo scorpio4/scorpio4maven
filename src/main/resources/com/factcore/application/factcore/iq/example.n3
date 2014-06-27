@@ -24,7 +24,7 @@
 
 :exampleSPARQLAbility
 	rdfs:label	"Example SPARQL Ability";
-	iq:classname	"com.com.factcore.iq.ability.sparql.SPARQLAbility";
+	iq:classname	"com.factcore.iq.ability.sparql.SPARQLAbility";
 .
 
 :examplePlanner
@@ -41,7 +41,7 @@
 		:query "SELECT DISTINCT ?this WHERE {?this a iq:Application}";
 	];
 	:from 		<direct://{{this}}>;
-	:to			<bean:com.com.factcore.vendor.camel.IQPlannerTest?method=testPlanCallback>;
+	:to			<bean:com.factcore.vendor.camel.IQPlannerTest?method=testPlanCallback>;
 .
 
 :timedPlan
@@ -51,15 +51,15 @@
 		:query "SELECT DISTINCT ?this WHERE {?this a iq:Application}";
 	];
 	:from 		<timer://jdkTimer?period=2000>;
-	:to			<bean:com.com.factcore.vendor.camel.IQPlannerTest?method=testTimerCallback>;
+	:to			<bean:com.factcore.vendor.camel.IQPlannerTest?method=testTimerCallback>;
 .
 
-<bean:com.com.factcore.vendor.camel.IQPlannerTest?method=testPlanCallback>
+<bean:com.factcore.vendor.camel.IQPlannerTest?method=testPlanCallback>
 	rdfs:label	"Example Camel Route Two";
-	:to			<bean:com.com.factcore.vendor.camel.IQPlannerTest?method=testPlan2Callback>;
+	:to			<bean:com.factcore.vendor.camel.IQPlannerTest?method=testPlan2Callback>;
 .
 
-<bean:com.com.factcore.vendor.camel.IQPlannerTest?method=testPlan2Callback>
+<bean:com.factcore.vendor.camel.IQPlannerTest?method=testPlan2Callback>
 	rdfs:label	"Example Camel Route Three";
 .
 

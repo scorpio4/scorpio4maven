@@ -1,7 +1,7 @@
 package com.factcore.mojo;
 
 import com.factcore.assets.AssetRegisters;
-import com.factcore.deploy.SesameDeployer;
+import com.factcore.deploy.Scorpio4SesameDeployer;
 import com.factcore.vendor.camel.RDFRoutePlanner;
 import com.factcore.vendor.camel.component.*;
 import com.factcore.vendor.sesame.crud.SesameCRUD;
@@ -35,11 +35,11 @@ public class CamelAPIMojo extends BaseFactToolsMojo {
 	public void executeInternal() throws Exception {
 		getLog().info("Camel API: " + getIdentity());
 
-		SesameDeployer sesameDeployer = new SesameDeployer(getFactSpace());
-		sesameDeployer.clean();
-		sesameDeployer.setDeployRDF(true);
-		sesameDeployer.setDeployScripts(true);
-		sesameDeployer.deploy(getSrcPath());
+		Scorpio4SesameDeployer scorpio4SesameDeployer = new Scorpio4SesameDeployer(getFactSpace());
+		scorpio4SesameDeployer.clean();
+		scorpio4SesameDeployer.setDeployRDF(true);
+		scorpio4SesameDeployer.setDeployScripts(true);
+		scorpio4SesameDeployer.deploy(getSrcPath());
 
 		assetRegister = new AssetRegisters(getConnection());
 

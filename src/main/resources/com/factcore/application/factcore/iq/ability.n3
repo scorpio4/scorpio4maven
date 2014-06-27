@@ -30,34 +30,34 @@
 :SPARQL
     a               iq:Ability;
     rdfs:label      "SPARQL Ability";
-    iq:classname    "com.com.factcore.iq.ability.sparql.SPARQLAbility";
+    iq:classname    "com.factcore.iq.ability.sparql.SPARQLAbility";
 	iq:enabled      "true"^^xsd:boolean;
 .
 
 :SQL
     a               iq:Ability;
     rdfs:label      "SQL Ability";
-    iq:classname    "com.com.factcore.iq.ability.sql.SQLAbility";
+    iq:classname    "com.factcore.iq.ability.sql.SQLAbility";
 	iq:enabled      "false"^^xsd:boolean;
 .
 
 :Camel
     a               iq:Ability;
     rdfs:label      "Camel Ability";
-    iq:classname    "com.com.factcore.iq.ability.camel.CamelAbility";
+    iq:classname    "com.factcore.iq.ability.camel.CamelAbility";
 	iq:enabled      "true"^^xsd:boolean;
 .
 
 :Script
     a               iq:Ability;
     rdfs:label      "Script Ability";
-    iq:classname    "com.com.factcore.iq.ability.camel.ScriptAbility";
+    iq:classname    "com.factcore.iq.ability.camel.ScriptAbility";
 	iq:enabled      "true"^^xsd:boolean;
 .
 
 :Activiti
     a               iq:Ability;
     rdfs:label      "Activiti BPM Ability";
-    iq:classname    "com.com.factcore.iq.ability.bpm.ActivitiAbility";
+    iq:classname    "com.factcore.iq.ability.bpm.ActivitiAbility";
 	iq:enabled      "false"^^xsd:boolean;
 .

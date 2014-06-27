@@ -10,12 +10,12 @@
 @prefix ux:			<urn:com.factcore:ux:>.
 @prefix : 			<urn:example:ux:>.
 
-<bean:com.com.factcore.curator.JDBC>
+<bean:com.factcore.curator.JDBC>
     a               fact:Curator;
     rdfs:label      "SQL Database Curator";
 .
 
-<bean:com.com.factcore.curator.XLS>
+<bean:com.factcore.curator.XLS>
     a               fact:Curator;
     rdfs:label      "Excel Curator";
 .

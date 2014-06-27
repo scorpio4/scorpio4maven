@@ -1,6 +1,6 @@
 package com.factcore.mojo;
 
-import com.factcore.deploy.SesameDeployer;
+import com.factcore.deploy.Scorpio4SesameDeployer;
 import com.factcore.oops.ConfigException;
 import com.factcore.oops.FactException;
 import org.openrdf.repository.RepositoryException;
@@ -30,10 +30,10 @@ public class AssetsMojo extends BaseFactToolsMojo {
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException {
         getLog().info("Loading Assets: "+getResourcesPath().getAbsolutePath());
 
-        SesameDeployer sesameDeployer = new SesameDeployer(getFactSpace());
-        sesameDeployer.setDeployRDF(false);
-        sesameDeployer.setDeployScripts(true);
+        Scorpio4SesameDeployer scorpio4SesameDeployer = new Scorpio4SesameDeployer(getFactSpace());
+        scorpio4SesameDeployer.setDeployRDF(false);
+        scorpio4SesameDeployer.setDeployScripts(true);
 
-        sesameDeployer.deploy(getResourcesPath());
+        scorpio4SesameDeployer.deploy(getResourcesPath());
     }
 }

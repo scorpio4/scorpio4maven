@@ -1,6 +1,6 @@
 package com.factcore.mojo;
 
-import com.factcore.deploy.SesameDeployer;
+import com.factcore.deploy.Scorpio4SesameDeployer;
 import com.factcore.oops.FactException;
 import org.openrdf.repository.RepositoryException;
 
@@ -33,10 +33,10 @@ public class RDFMojo extends BaseFactToolsMojo {
         getConnection().clear();
 	    getConnection().commit();
 
-        SesameDeployer sesameDeployer = new SesameDeployer(getFactSpace());
-        sesameDeployer.setDeployRDF(true);
-        sesameDeployer.setDeployScripts(false);
+        Scorpio4SesameDeployer scorpio4SesameDeployer = new Scorpio4SesameDeployer(getFactSpace());
+        scorpio4SesameDeployer.setDeployRDF(true);
+        scorpio4SesameDeployer.setDeployScripts(false);
 
-        sesameDeployer.deploy(getSrcPath());
+        scorpio4SesameDeployer.deploy(getSrcPath());
     }
 }

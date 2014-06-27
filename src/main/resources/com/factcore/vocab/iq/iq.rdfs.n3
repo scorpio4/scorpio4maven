@@ -28,7 +28,7 @@
 	rdfs:label			"An Application";
 	rdfs:comment 		"A curated collection of user experiences";
 	rdfs:isDefinedBy	:;
-    iq:factory          "com.com.factcore.factory.ApplicationFactory";
+    iq:factory          "com.factcore.factory.ApplicationFactory";
     fab:feature         "Build Knowledge Apps";
     fab:benefit         "Apps provide a rich user experience to manage selected digital assets.";
 .
@@ -50,7 +50,7 @@
 	rdfs:label			"Ability";
 	rdfs:comment 		"Abilities exhibit Behaviours";
 	rdfs:isDefinedBy	:;
-    iq:factory          "com.com.factcore.factory.AbilityFactory";
+    iq:factory          "com.factcore.factory.AbilityFactory";
 .
 
 :Capability

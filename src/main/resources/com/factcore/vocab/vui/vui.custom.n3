@@ -14,7 +14,7 @@
     rdfs:subClassOf :Component;
     rdfs:label      "Iconic Menu";
     rdfs:comment    "A VUI editor";
-    iq:classname    "com.com.factcore.vendor.vaadin.ui.menu.IconicMenu";
+    iq:classname    "com.factcore.vendor.vaadin.ui.menu.IconicMenu";
 	rdfs:isDefinedBy	:;
 .
 
@@ -22,7 +22,7 @@
     rdfs:subClassOf :Component;
     rdfs:label      "Tabbed Editor";
     rdfs:comment    "A VUI tabbed editor";
-    iq:classname    "com.com.factcore.vendor.vaadin.ui.menu.TabbedEditor";
+    iq:classname    "com.factcore.vendor.vaadin.ui.menu.TabbedEditor";
 	rdfs:isDefinedBy	:;
 .
 
@@ -30,7 +30,7 @@
     rdfs:subClassOf :Component;
     rdfs:label      "User Profile";
     rdfs:comment    "A VUI user profile";
-    iq:classname    "com.com.factcore.vendor.vaadin.ui.menu.UserProfile";
+    iq:classname    "com.factcore.vendor.vaadin.ui.menu.UserProfile";
 	rdfs:isDefinedBy	:;
 .
 
@@ -38,7 +38,7 @@
     rdfs:subClassOf :Component;
     rdfs:label      "User Profile";
     rdfs:comment    "A VUI user profile";
-    iq:classname    "com.com.factcore.vendor.vaadin.ui.rich.Uploader";
+    iq:classname    "com.factcore.vendor.vaadin.ui.rich.Uploader";
 	rdfs:isDefinedBy	:;
 .
 
@@ -46,7 +46,7 @@
     rdfs:subClassOf :Component;
     rdfs:label      "User Profile";
     rdfs:comment    "A VUI user profile";
-    iq:classname    "com.com.factcore.vendor.vaadin.ui.rich.Uploader";
+    iq:classname    "com.factcore.vendor.vaadin.ui.rich.Uploader";
 	rdfs:isDefinedBy	:;
 .
 
@@ -54,7 +54,7 @@
     rdfs:subClassOf :Component;
     rdfs:label      "Rich Text Editor";
     rdfs:comment    "A VUI Rich Text Editor";
-    iq:classname    "com.com.factcore.vendor.vaadin.ui.rich.RichTextEditor";
+    iq:classname    "com.factcore.vendor.vaadin.ui.rich.RichTextEditor";
 	rdfs:isDefinedBy	:;
 .
 
@@ -62,6 +62,6 @@
     rdfs:subClassOf :Table;
     rdfs:label      "Grid";
     rdfs:comment    "A VUI editable grid";
-    iq:classname    "com.com.factcore.vendor.vaadin.ui.rich.Grid";
+    iq:classname    "com.factcore.vendor.vaadin.ui.rich.Grid";
 	rdfs:isDefinedBy	:;
 .
