@@ -5,9 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>scorpio4</groupId>
+        <groupId>com.scorpio4</groupId>
         <artifactId>scorpio4master</artifactId>
         <version>0.03-SNAPSHOT</version>
+        <relativePath>../scorpio4master</relativePath>
     </parent>
 
     <artifactId>scorpio4rdf</artifactId>
@@ -17,7 +18,7 @@
     <organization>
         <name>Fact:Core</name>
     </organization>
-    <url>http://www.com.factcore.com</url>
+    <url>http://www.scorpio4.com</url>
 
     <developers>
         <developer>
@@ -32,10 +33,17 @@
             <timezone>+11</timezone>
         </developer>
     </developers>
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <scm>
-        <connection>scm:git:http://54.79.86.22:8080/gitblit/r/FactTools.git</connection>
-        <developerConnection>scm:git:http://lee@54.79.86.22:8080/gitblit/r/FactTools.git</developerConnection>
+        <url>://github.com/troven/scorpio4rdf.git</url>
+        <connection>scm:git:https://github.com/troven/scorpio4rdf.git</connection>
     </scm>
 
     <properties>
@@ -115,7 +123,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>scorpio4</groupId>
+            <groupId>com.scorpio4</groupId>
             <artifactId>scorpio4core</artifactId>
             <version>${project.version}</version>
         </dependency>
