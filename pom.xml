@@ -7,13 +7,13 @@
     <parent>
         <groupId>scorpio4</groupId>
         <artifactId>scorpio4master</artifactId>
-        <version>0.02-SNAPSHOT</version>
+        <version>0.03-SNAPSHOT</version>
     </parent>
 
-    <artifactId>FactTools</artifactId>
+    <artifactId>scorpio4rdf</artifactId>
     <packaging>maven-plugin</packaging>
 
-    <name>FactTools</name>
+    <name>Scorpio4 RDF Tools</name>
     <organization>
         <name>Fact:Core</name>
     </organization>
@@ -116,7 +116,7 @@
 
         <dependency>
             <groupId>scorpio4</groupId>
-            <artifactId>Common</artifactId>
+            <artifactId>scorpio4core</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -168,6 +168,13 @@
             <version>${camel.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
 
     </dependencies>
 
