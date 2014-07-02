@@ -44,7 +44,7 @@
     </licenses>
 
     <scm>
-        <url>://github.com/troven/scorpio4rdf.git</url>
+        <url>github.com/troven/scorpio4rdf.git</url>
         <connection>scm:git:https://github.com/troven/scorpio4rdf.git</connection>
     </scm>
 
