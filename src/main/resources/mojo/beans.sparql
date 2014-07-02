@@ -1,7 +1,7 @@
-prefix camel: 		<http://factcore.com/core/camel/>
+prefix flo: 		<http://factcore.com/core/flo/>
 
 SELECT DISTINCT ?this ?class
 WHERE {
 ?this a ?class.
-?class a camel:Bean.
+?class a flo:Bean.
 }

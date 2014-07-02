@@ -1,0 +1,5 @@
+prefix flo: 		<http://factcore.com/core/flo/>
+
+SELECT DISTINCT ?from ?to WHERE {
+	?from flo:to ?to
+}

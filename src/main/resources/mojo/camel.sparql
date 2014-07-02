@@ -1,5 +1,0 @@
-prefix camel: 		<http://factcore.com/core/camel/>
-
-SELECT DISTINCT ?from ?to WHERE {
-	?from camel:to ?to
-}

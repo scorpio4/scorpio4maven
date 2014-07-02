@@ -2,12 +2,14 @@ package com.factcore.mojo;
 
 import com.factcore.assets.AssetRegisters;
 import com.factcore.deploy.Scorpio4SesameDeployer;
-import com.factcore.vendor.camel.RDFRoutePlanner;
 import com.factcore.vendor.camel.component.*;
+import com.factcore.vendor.camel.planner.RDFRoutePlanner;
 import com.factcore.vendor.sesame.crud.SesameCRUD;
+import com.factcore.vocab.COMMON;
 import org.apache.camel.CamelContext;
+import org.apache.camel.Route;
 import org.apache.camel.impl.DefaultCamelContext;
-import org.apache.camel.impl.JndiRegistry;
+import org.apache.camel.impl.SimpleRegistry;
 
 import java.util.Collection;
 import java.util.Map;
@@ -43,10 +45,11 @@ public class CamelAPIMojo extends BaseFactToolsMojo {
 
 		assetRegister = new AssetRegisters(getConnection());
 
-		JndiRegistry jndi = new JndiRegistry();
-		CamelContext camel = new DefaultCamelContext(jndi);
+		SimpleRegistry registry = new SimpleRegistry();
+		CamelContext camel = new DefaultCamelContext(registry);
 
 		RDFRoutePlanner routePlanner = new RDFRoutePlanner(camel, getFactSpace());
+		routePlanner.setBaseURI(COMMON.CORE+"flo/");
 		getLog().info("API ready in: " + stopWatch.toString());
 
 		SesameCRUD crud = new SesameCRUD(getFactSpace(), assetRegister);
@@ -58,7 +61,7 @@ public class CamelAPIMojo extends BaseFactToolsMojo {
 				getLog().info("Bean: "+classname);
 				Class clasz = Class.forName(classname);
 				Object bound = clasz.newInstance();
-				jndi.bind((String) bean.get("this"), bound );
+				registry.put((String) bean.get("this"), bound);
 			}
 		}
 
@@ -66,14 +69,21 @@ public class CamelAPIMojo extends BaseFactToolsMojo {
 		camel.addComponent("crud", new CRUDComponent(crud));
 		camel.addComponent("core", new CoreComponent(getFactSpace(), assetRegister ));
 		camel.addComponent("any23", new Any23Component());
-		camel.addComponent("sparql", new SesameComponent(getConnection()));
+		camel.addComponent("sparql", new SesameComponent(repositoryManager));
 
-//		jndi.bind("self", this);
+//		registry.bind("self", this);
 		getLog().info("API bound " + beans.size() + " beans in: " + stopWatch.toString());
 //		Collection<Map> routeTemplates = crud.read("mojo/beans", null);
 
+//		DefaultDebugger debugger = new DefaultDebugger();
+//		debugger.addBreakpoint(new Brea)
+//		camel.setDebugger( debugger );
+
 		routePlanner.plan();
 		getLog().info("Planned "+camel.getRoutes().size()+" routes in: " + stopWatch.toString());
+		for(Route route:camel.getRoutes()) {
+			getLog().info("\t\t"+route.getId()+" -> "+route.getEndpoint());
+		}
 
 		camel.start();
 		getLog().info("Started in: " + stopWatch.toString());

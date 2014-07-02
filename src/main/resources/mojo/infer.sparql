@@ -1,3 +1,4 @@
 SELECT DISTINCT ?this ?sparql WHERE {
-    ?this <urn:xyz> ?sparql.
+    ?this 	a 				toolchain:Infer;
+    		core:hasAsset 	?sparql;
 }

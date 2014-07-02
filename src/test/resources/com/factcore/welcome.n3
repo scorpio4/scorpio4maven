@@ -1,4 +1,4 @@
-@prefix com.factcore: <http://com.factcore.com/core/> .
+@prefix com.factcore: <http://factcore.com/core/> .
 
 <urn:FactTools:>
     a                   com.factcore:Instance;

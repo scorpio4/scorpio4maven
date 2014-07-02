@@ -1,4 +1,4 @@
-package com.factcore.examples.camel;
+package com.factcore.examples.flo;
 
 
 import org.apache.camel.Exchange;
@@ -22,6 +22,10 @@ public class HelloWorld {
 
 	public HelloWorld() {
 		log.debug("Hello World");
+	}
+
+	public HelloWorld(String hi) {
+		log.debug("!! "+hi+" !!");
 	}
 
 	@Handler

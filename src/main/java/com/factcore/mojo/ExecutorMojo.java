@@ -2,7 +2,7 @@ package com.factcore.mojo;
 
 import com.factcore.iq.exec.Executor;
 import com.factcore.iq.exec.Inferring;
-import com.factcore.iq.exec.Publishing;
+import com.factcore.iq.exec.Templating;
 import com.factcore.iq.exec.Scripting;
 import com.factcore.oops.AssetNotSupported;
 import com.factcore.oops.ConfigException;
@@ -47,7 +47,7 @@ public class ExecutorMojo extends BaseFactToolsMojo {
 
         executor.addExecutable(new Inferring(getFactSpace()));
         executor.addExecutable(new Scripting());
-        executor.addExecutable(new Publishing());
+        executor.addExecutable(new Templating());
 
         SesameCRUD sesameCRUD = new SesameCRUD(getFactSpace());
         Collection<Map> rules = sesameCRUD.read("mojo/toolchain", meta);
