@@ -1,10 +1,10 @@
-package com.factcore.mojo;
+package com.scorpio4.mojo;
 
-import com.factcore.assets.Asset;
-import com.factcore.oops.ConfigException;
-import com.factcore.oops.FactException;
-import com.factcore.vendor.sesame.io.SPARQLer;
-import com.factcore.vocab.COMMON;
+import com.scorpio4.assets.Asset;
+import com.scorpio4.oops.ConfigException;
+import com.scorpio4.oops.FactException;
+import com.scorpio4.vendor.sesame.io.SPARQLer;
+import com.scorpio4.vocab.COMMON;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.repository.Repository;
@@ -15,7 +15,7 @@ import java.io.IOException;
 
 /**
  * Fact:Core (c) 2014
- * Module: com.factcore.maven
+ * Module: com.scorpio4.maven
  * User  : lee
  * Date  : 16/06/2014
  * Time  : 5:38 PM

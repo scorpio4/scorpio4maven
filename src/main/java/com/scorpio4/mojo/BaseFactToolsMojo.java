@@ -1,10 +1,10 @@
-package com.factcore.mojo;
+package com.scorpio4.mojo;
 
 import org.apache.maven.project.MavenProject;
 
 /**
  * Fact:Core (c) 2014
- * Module: com.factcore.maven
+ * Module: com.scorpio4.maven
  * User  : lee
  * Date  : 16/06/2014
  * Time  : 5:36 PM

@@ -1,14 +1,14 @@
-package com.factcore.mojo;
+package com.scorpio4.mojo;
 
-import com.factcore.deploy.Scorpio4SesameDeployer;
-import com.factcore.oops.FactException;
+import com.scorpio4.deploy.Scorpio4SesameDeployer;
+import com.scorpio4.oops.FactException;
 import org.openrdf.repository.RepositoryException;
 
 import java.io.IOException;
 
 /**
  * Fact:Core (c) 2014
- * Module: com.factcore.maven
+ * Module: com.scorpio4.maven
  * User  : lee
  * Date  : 16/06/2014
  * Time  : 5:38 PM

@@ -1,14 +1,14 @@
-package com.factcore.mojo;
+package com.scorpio4.mojo;
 
-import com.factcore.iq.exec.Executor;
-import com.factcore.iq.exec.Inferring;
-import com.factcore.iq.exec.Templating;
-import com.factcore.iq.exec.Scripting;
-import com.factcore.oops.AssetNotSupported;
-import com.factcore.oops.ConfigException;
-import com.factcore.oops.FactException;
-import com.factcore.oops.IQException;
-import com.factcore.vendor.sesame.crud.SesameCRUD;
+import com.scorpio4.iq.exec.Executor;
+import com.scorpio4.iq.exec.Inferring;
+import com.scorpio4.iq.exec.Templating;
+import com.scorpio4.iq.exec.Scripting;
+import com.scorpio4.oops.AssetNotSupported;
+import com.scorpio4.oops.ConfigException;
+import com.scorpio4.oops.FactException;
+import com.scorpio4.oops.IQException;
+import com.scorpio4.vendor.sesame.crud.SesameCRUD;
 import org.openrdf.repository.RepositoryException;
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
 
 /**
  * Fact:Core (c) 2014
- * Module: com.factcore.maven
+ * Module: com.scorpio4.maven
  * User  : lee
  * Date  : 16/06/2014
  * Time  : 5:39 PM

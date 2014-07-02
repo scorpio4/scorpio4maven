@@ -1,4 +1,4 @@
-package com.factcore.examples.flo;
+package com.scorpio4.examples.flo;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Expression;
@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Scorpio (c) 2014
- * Module: com.factcore.examples.camel
+ * Module: com.scorpio4.examples.camel
  * User  : lee
  * Date  : 27/06/2014
  * Time  : 5:18 PM

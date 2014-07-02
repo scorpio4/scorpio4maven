@@ -1,4 +1,4 @@
-package com.factcore.examples.flo;
+package com.scorpio4.examples.flo;
 
 
 import org.apache.camel.Exchange;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
  * Scorpio (c) 2014
- * Module: com.factcore.examples.camel
+ * Module: com.scorpio4.examples.camel
  * User  : lee
  * Date  : 21/06/2014
  * Time  : 9:20 PM
