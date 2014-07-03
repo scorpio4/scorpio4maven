@@ -1,7 +1,0 @@
-SELECT DISTINCT ?this ?label
-WHERE {
-    ?that   a               iq:Application.
-    ?this   user:uses	    ?that;
-            rdfs:label      ?label;
-.
-}

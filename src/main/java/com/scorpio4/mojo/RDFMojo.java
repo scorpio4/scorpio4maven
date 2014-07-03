@@ -7,7 +7,7 @@ import org.openrdf.repository.RepositoryException;
 import java.io.IOException;
 
 /**
- * Fact:Core (c) 2014
+ * Scorpio4 (c) 2014
  * Module: com.scorpio4.maven
  * User  : lee
  * Date  : 16/06/2014

@@ -18,8 +18,8 @@
     <url>http://www.scorpio4.com</url>
 
     <organization>
-        <name>Fact:Core</name>
-        <url>http://www.factcore.com/scorpio4/</url>
+        <name>Scorpio4</name>
+        <url>http://www.scorpio4.com/scorpio4/</url>
     </organization>
 
     <developers>
@@ -27,7 +27,7 @@
             <id>lee</id>
             <name>Lee Curtis</name>
             <email>lee.curtis@me.com</email>
-            <organization>Troven / Fact:Core</organization>
+            <organization>Troven / Scorpio4</organization>
             <roles>
                 <role>architect</role>
                 <role>developer</role>

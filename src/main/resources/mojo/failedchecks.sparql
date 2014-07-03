@@ -1,4 +1,4 @@
-PREFIX toolchain: 	<http://factcore.com/core/toolchain/>
+PREFIX toolchain: 	<http://scorpio4.com/core/toolchain/>
 
 SELECT DISTINCT ?this ?that WHERE {
     ?this a ?that.

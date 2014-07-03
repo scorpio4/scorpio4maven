@@ -3,7 +3,7 @@ package com.scorpio4.mojo;
 import com.scorpio4.assets.AssetRegisters;
 import com.scorpio4.deploy.Scorpio4SesameDeployer;
 import com.scorpio4.vendor.camel.component.*;
-import com.scorpio4.vendor.camel.planner.RDFRoutePlanner;
+import com.scorpio4.vendor.camel.planner.CamelFLO;
 import com.scorpio4.vendor.sesame.crud.SesameCRUD;
 import com.scorpio4.vocab.COMMON;
 import org.apache.camel.CamelContext;
@@ -15,7 +15,7 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * Fact:Core (c) 2014
+ * Scorpio4 (c) 2014
  * Module: com.scorpio4.maven
  * User  : lee
  * Date  : 16/06/2014
@@ -48,7 +48,7 @@ public class CamelAPIMojo extends BaseFactToolsMojo {
 		SimpleRegistry registry = new SimpleRegistry();
 		CamelContext camel = new DefaultCamelContext(registry);
 
-		RDFRoutePlanner routePlanner = new RDFRoutePlanner(camel, getFactSpace());
+		CamelFLO routePlanner = new CamelFLO(camel, getFactSpace());
 		routePlanner.setBaseURI(COMMON.CORE+"flo/");
 		getLog().info("API ready in: " + stopWatch.toString());
 

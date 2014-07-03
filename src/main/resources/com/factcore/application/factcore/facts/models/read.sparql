@@ -1,5 +1,0 @@
-SELECT DISTINCT ?this ?label
-WHERE {
-    ?this  a            fact:Model;
-           rdfs:label   ?label.
-} ORDER BY ?label

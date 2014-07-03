@@ -1,3 +1,0 @@
-# @rdfs:comment total number of distinct classes
-SELECT (COUNT(distinct ?o) AS ?total)
-WHERE { ?s rdf:type ?o }

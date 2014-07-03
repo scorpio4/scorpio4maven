@@ -1,3 +1,0 @@
-SELECT DISTINCT (COUNT(distinct ?this) AS ?this) (COUNT(distinct ?has) AS ?has) (COUNT(distinct ?that) AS ?that)
-WHERE { ?this ?has ?that }
-

@@ -1,7 +1,7 @@
-@prefix com.factcore: <http://factcore.com/core/> .
+@prefix com.scorpio4: <http://scorpio4.com/core/> .
 
 <urn:FactTools:>
-    a                   com.factcore:Instance;
+    a                   com.scorpio4:Instance;
     rdfs:label          "Fact Tools";
 .
 

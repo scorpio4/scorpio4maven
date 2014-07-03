@@ -1,9 +1,0 @@
-SELECT DISTINCT ?that ?this ?label ?range ?comment WHERE {
-	?this
-	    rdfs:isDefinedBy ?that;
-        rdfs:label ?label;
-        a	rdfs:Class.
-	OPTIONAL { ?this rdfs:comment ?comment. }
-}
-ORDER BY ?that ?label
-BINDINGS ?that { (<{{this}}>) }

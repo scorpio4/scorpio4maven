@@ -4,8 +4,8 @@
 
     <parent>
         <groupId>com.scorpio4</groupId>
-        <artifactId>scorpio4master</artifactId>
-        <version>0.03-SNAPSHOT</version>
+        <artifactId>scorpio4</artifactId>
+        <version>0.04-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
 
@@ -16,8 +16,8 @@
     <url>http://www.scorpio4.com</url>
 
     <organization>
-        <name>Fact:Core</name>
-        <url>http://www.factcore.com/scorpio4/</url>
+        <name>scorpio4</name>
+        <url>http://www.scorpio4.com/pom/</url>
     </organization>
 
     <developers>
@@ -25,7 +25,7 @@
             <id>lee</id>
             <name>Lee Curtis</name>
             <email>lee.curtis@me.com</email>
-            <organization>Troven / Fact:Core</organization>
+            <organization>Troven / Scorpio4</organization>
             <roles>
                 <role>architect</role>
                 <role>developer</role>
