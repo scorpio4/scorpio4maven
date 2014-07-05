@@ -1,0 +1,96 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+@prefix foaf:       <http://xmlns.com/foaf/0.1/> .
+
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix user:		<urn:com.scorpio4:user:>.
+@prefix can:		<urn:com.scorpio4:can:>.
+@prefix iq:			<urn:com.scorpio4:>.
+@prefix ux:			<urn:com.scorpio4:ux:>.
+@prefix : 			<urn:com.scorpio4:user:>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"User";
+	dc:title			"User vocabulary";
+	rdfs:comment		"Vocabulary for describing Scorpio4 Users";
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
+.
+
+:Agent
+	a					rdfs:Class;
+	rdfs:label			"user";
+	rdfs:comment 		"A user agent";
+	rdfs:isDefinedBy	:;
+.
+
+:Group
+	a					rdfs:Class;
+	rdfs:label			"group";
+	rdfs:comment 		"A User Group";
+	rdfs:isDefinedBy	:;
+.
+
+:Role
+	a					rdfs:Class;
+	rdfs:label			"role";
+	rdfs:comment 		"A User Role";
+	rdfs:isDefinedBy	:;
+.
+
+:uses
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"users";
+	rdfs:domain			:Agent;
+	rdfs:range  		:Usable;
+.
+
+:hasRole
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"has role";
+	rdfs:domain			:Agent;
+	rdfs:range  		:Role;
+.
+
+:hasGroup
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"has group";
+	rdfs:comment        "agents and roles can belong to groups";
+	rdfs:range  		:Group;
+.
+
+:username
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"username";
+	rdfs:domain			:Agent;
+	rdfs:range  		xsd:string;
+.
+:password
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"password";
+	rdfs:domain			:Agent;
+	rdfs:range  		xsd:string;
+.
+
+:prefers
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"prefers";
+	rdfs:range  		:Preference;
+.
+
+:email
+    rdfs:subPropertyOf  foaf:mbox;
+	rdfs:label 			"prefers";
+.

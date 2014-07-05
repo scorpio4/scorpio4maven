@@ -1,0 +1,55 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.scorpio4:>.
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix can:		<urn:com.scorpio4:can:>.
+@prefix script:		<urn:com.scorpio4:script:>.
+@prefix asq:		<urn:com.scorpio4:asq:>.
+@prefix nms:	 	<urn:com.scorpio4:nms:>.
+@prefix ux:	 		<urn:com.scorpio4:ux:>.
+@prefix user:	 	<urn:com.scorpio4:user:>.
+@prefix : 			<urn:com.scorpio4:application:com.scorpio4:>.
+
+# Example Application
+:
+	a				iq:Application;
+	iq:id			"com.scorpio4";
+	rdfs:label 		"Scorpio4 Admin";
+    iq:enabled       "true"^^xsd:boolean;
+
+	Scorpio4		<urn:com.scorpio4:application:com.scorpio4:finder:core>;
+	fact:from       <urn:com.scorpio4:application:com.scorpio4:finder:models>;
+	fact:from       <urn:com.scorpio4:application:com.scorpio4:finder:emails>;
+
+	iq:boot			<urn:com.scorpio4.application.com.scorpio4.iq.onBootShowOntologies>;
+	iq:boot			<urn:com.scorpio4.application.com.scorpio4.iq.onBootShowApplications>;
+	iq:deploy       <urn:com.scorpio4.application.com.scorpio4.iq.onDeploy>;
+
+	iq:aware		<urn:com.scorpio4:iq:awareness:10minute>;
+#	iq:aware		<urn:com.scorpio4:iq:awareness:1minute_trigger>;
+#	iq:aware		<urn:com.scorpio4:exampleMailReader>;
+#	iq:aware		[
+#		rdfs:label	"SNMP Poller";
+#		iq:for		nms:ExampleHosts;
+#		iq:from		<snmp:{{ipv4}}:161?protocol=udp&snmpCommunity=public&type=POLL&oids=1.3.6.1.2.1.1.4.0>;
+#		iq:to		<log:com.scorpio4.example.app.hello?level=DEBUG>;
+#	];
+.
+
+# IQ Routes
+
+nms:ExampleHosts
+	iq:query "SELECT DISTINCT ?this ?ipv4 WHERE {?this nms:ipv4Address ?ipv4}"^^<http://www.iana.org/assignments/media-types/text/x-sparql-query>;
+.
+
+nms:127_0_0_1
+	nms:ipv4Address "127.0.0.1";
+.
+nms:10_0_1_9
+ 	nms:ipv4Address "10.0.1.9";
+ .

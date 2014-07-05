@@ -1,0 +1,5 @@
+SELECT ?this (COUNT(?core) as ?cores) ?context WHERE {
+	GRAPH ?context {
+		?this	Scorpio4 	?core.
+	}
+} GROUP BY ?this ?context

@@ -1,0 +1,263 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix iq:			<urn:com.scorpio4:>.
+@prefix ux:			<urn:com.scorpio4:ux:>.
+@prefix : 			<urn:com.scorpio4:ux:>.
+
+:Widget
+	rdfs:label			"Widget";
+	rdfs:comment 		"A UX Widget";
+	rdfs:isDefinedBy	:;
+.
+
+:ASQ
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"ASQ Query";
+	rdfs:comment 		"ASQ Query Editor";
+	rdfs:isDefinedBy	:;
+	ux:shape			ux:Collection;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+
+:Breadcrumbs
+	rdfs:subClassOf		:Container;
+	rdfs:label			"Breadcrumbs";
+	rdfs:comment 		"Historic Breadcrumbs";
+	rdfs:isDefinedBy	:;
+	ux:shape			ux:Collection;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Calendar
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Calendar";
+	rdfs:comment 		"Full-size Calendar";
+	rdfs:isDefinedBy	:;
+	ux:shape			ux:Collection;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Carousel
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Carousel";
+	rdfs:comment 		"Carousel Widget/Image Gallery";
+	rdfs:isDefinedBy	:;
+	ux:shape			ux:Collection;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+
+:CodeBlock
+	rdfs:subClassOf		:Widget;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"IQ Designer";
+	rdfs:comment 		"Custom Logic Programming";
+	rdfs:isDefinedBy	:;
+	ux:shape			ux:Model;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Concept
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Concept";
+	rdfs:comment 		"Concept Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Dashboard
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Dashboard";
+	rdfs:comment 		"Dashboard";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Dashboard3D
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"3D Dashboard";
+	rdfs:comment 		"3D Dashboard Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Design
+	rdfs:subClassOf		:Widget;
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"UI Designer";
+	rdfs:comment 		"UI Designer Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Dropzone
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Drop Zone";
+	rdfs:comment 		"Drop Zone Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:GraphCompass
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Graph Compass";
+	rdfs:comment 		"Graph Compass Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Grid
+	rdfs:subClassOf		:Editor;
+	rdfs:label			"Grid";
+	rdfs:comment 		"Grid Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:HTML
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"HTML";
+	rdfs:comment 		"HTML Widget & Editor";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Image
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Image";
+	rdfs:comment 		"Image Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Layout
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Layout";
+	rdfs:comment 		"Layout Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+
+
+
+:List
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"List";
+	rdfs:comment 		"List Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:MenuButton
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Menu Button";
+	rdfs:comment 		"Menu Button Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Modal
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Modal";
+	rdfs:comment 		"Modal Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:NavBar
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"NavBar";
+	rdfs:comment 		"NavBar Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+#Pivot View
+#Query
+#Rich Text
+#Slide Tree
+
+:Snippet
+	rdfs:subClassOf		:HTML;
+	rdfs:label			"Snippet";
+	rdfs:comment 		"Snippet Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label about='{{this}}'>{{label}}</label></div>"^^xsd:html;
+	]
+.
+
+:Tabs
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Tabs";
+	rdfs:comment 		"Tabbed Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:TagSelect
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Tag Select";
+	rdfs:comment 		"Tag Select Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+:Tiles
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Tiles";
+	rdfs:comment 		"Tiles Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.
+#Tiny Inbox
+:Tree
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"Tree Select";
+	rdfs:comment 		"Tree Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div class='ux_sample'><label>{{label}}</label><ul class='ux_toggled'><li>Tree 1<ul class='ux_tree_branch'><li>Tree 1.1</li><li>Tree 1.2</li></ul></li><li>Tree 2</li></ul></div>"^^xsd:html;
+	];
+.
+#Widget
+:WorkSpace
+	rdfs:subClassOf		:Widget;
+	rdfs:label			"WorkSpace";
+	rdfs:comment 		"WorkSpace Widget";
+	rdfs:isDefinedBy	:;
+	ux:template			[
+		ux:body			"<div><label>{{label}}</label></div>"^^xsd:html;
+	]
+.

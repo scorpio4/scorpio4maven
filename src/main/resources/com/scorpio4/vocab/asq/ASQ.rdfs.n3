@@ -1,0 +1,98 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.scorpio4:>.
+@prefix asq:		<urn:com.scorpio4:asq:>.
+@prefix : 			<urn:com.scorpio4:asq:>.
+
+#
+# Abstract Query Notation
+#
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"ASQ";
+	dc:title			"ASQ Queries";
+	rdfs:comment		"Vocabulary for describing queries.";
+	dc:created			"2013-07-1"^^xsd:date;
+	dc:modified			"2013-07-1"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
+.
+
+:Query
+	a					rdfs:Class;
+	rdfs:label			"Query";
+	rdfs:comment 		"A Query consists of Matchers";
+	rdfs:isDefinedBy	:;
+.
+
+:Matcher
+	a					rdfs:Class;
+	rdfs:label			"Matcher";
+	rdfs:comment 		"A matcher consists of ?that ?has ?this clauses";
+	rdfs:isDefinedBy	:;
+.
+
+:Term
+	a					rdfs:Class;
+	rdfs:label			"Term";
+	rdfs:comment 		"A clause that can be matched";
+	rdfs:isDefinedBy	:;
+.
+
+:where
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"where";
+	rdfs:domain			:Query;
+	rdfs:range  		:Matcher;
+.
+
+:filter
+	a					rdf:Property;
+	rdfs:subPropertyOf	iq:script;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"where";
+	rdfs:domain			:Model;
+	rdfs:range  		:ScriptedBehaviour;
+.
+
+:next
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"next query";
+#	rdfs:domain			:Query;
+	rdfs:range  		:Query;
+.
+
+:that
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"?that";
+	rdfs:range  		:Term;
+.
+:has
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"?has";
+	rdfs:range  		:Term;
+.
+:this
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"?this";
+	rdfs:range  		:Term;
+.
+
+:optional
+	a					owl:ObjectProperty;
+	a					rdfs:subPropertyOf;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"optional";
+	rdfs:range  		xsd:boolean;
+.
+

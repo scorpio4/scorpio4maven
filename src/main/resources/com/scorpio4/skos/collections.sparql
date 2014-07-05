@@ -1,0 +1,4 @@
+SELECT DISTINCT ?this ?label WHERE {
+    ?this a skos:Concept.
+    ?this skos:prefLabel ?label
+}

@@ -1,0 +1,7 @@
+# Classes that are members of the disjointed set
+SELECT DISTINCT ?this ?that
+WHERE {
+	?this a ?this_type.
+	?that a ?that_type.
+	?this_type owl:disjointWith ?that_type.
+}

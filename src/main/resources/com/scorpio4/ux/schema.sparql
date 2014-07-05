@@ -1,0 +1,10 @@
+SELECT DISTINCT ?this ?id ?alias
+WHERE {
+	?that ui:pivotOn ?this.
+		?this ui:id ?id.
+	OPTIONAL {
+		?this ui:renders ?field.
+		?field ?has_alias ?alias.
+		?has_alias a scorpio4:id.
+	}
+} BINDINGS ?that{ (<{{this}}>) }

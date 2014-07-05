@@ -1,0 +1,5 @@
+{
+    "urn:com.scorpio4:iq:oops:api-error": {
+        label: "API Error"
+    }
+}

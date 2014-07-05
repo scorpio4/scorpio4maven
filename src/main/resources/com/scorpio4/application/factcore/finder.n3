@@ -1,0 +1,44 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.scorpio4:>.
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix can:		<urn:com.scorpio4:can:>.
+@prefix script:		<urn:com.scorpio4:script:>.
+@prefix asq:		<urn:com.scorpio4:asq:>.
+@prefix nms:	 	<urn:com.scorpio4:nms:>.
+@prefix ux:	 		<urn:com.scorpio4:ux:>.
+@prefix user:	 	<urn:com.scorpio4:user:>.
+@prefix : 			<urn:com.scorpio4:application:com.scorpio4:finder:>.
+
+
+# Fact Finders
+
+:core
+	a				fact:Finder;
+	fact:id			"core";
+	rdfs:label 		"Scorpio4 Core";
+	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/example>;
+	iq:classname 	"com.scorpio4.vendor.sesame.source.SesameFactSource";
+.
+
+:models
+	a				fact:Finder;
+	fact:id			"models";
+	rdfs:label 		"Scorpio4 Models";
+	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/example>;
+	iq:classname 	"com.scorpio4.vendor.sesame.source.SesameFactSource";
+.
+
+:emails
+	a				fact:Finder;
+	fact:id			"emails";
+	rdfs:label 		"Scorpio4 Email";
+	iq:url			<http://127.0.0.1:8080/openrdf-sesame/repositories/lee>;
+	iq:classname 	"com.scorpio4.vendor.sesame.source.SesameFactSource";
+.
+

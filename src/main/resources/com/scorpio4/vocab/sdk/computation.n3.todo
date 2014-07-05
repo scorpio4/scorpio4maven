@@ -1,0 +1,59 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:scorpio4:fact:>.
+@prefix iq:			<urn:scorpio4:>.
+@prefix ux:			<urn:scorpio4:ux:>.
+@prefix : 			<urn:scorpio4:ux:>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"Computation";
+	dc:title			"Computation vocabulary";
+	rdfs:comment		"Vocabulary for describing Program Computations.";
+	dc:created			"2013-01-30"^^xsd:date;
+	dc:modified			"2013-01-30"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
+.
+
+
+:CodeModel
+    rdfs:label      "Code Model";
+    rdfs:comment    "
+.
+:codeElement
+    rdfs:label      "code element";
+    rdfs:domain     :CodeModel;
+    rdfs:range      :AbstractCodeElement;
+    owl:minCardinality  "0"^^xsd:integer;
+    owl:maxCardinality  "*"^^xsd:integer;
+.
+
+CodeInheritances
+Modules
+
+ControlElements
+DataElements
+Values
+PrimitiveTypes
+EnumeratedTypes
+CompositeTypes
+DerivedTypes
+Signature
+DefinedTypes
+ClassTypes
+Templates
+TemplateRelations
+ClassRelations
+TypeRelations
+InterfaceRelations
+PreprocessorDirectives
+PreprocessorRelations
+Comment
+Visibility
+VisibilityRelations
+ExtendedCodeElements

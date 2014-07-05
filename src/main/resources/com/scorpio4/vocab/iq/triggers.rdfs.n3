@@ -1,0 +1,46 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.scorpio4:>.
+@prefix script:		<urn:com.scorpio4:script:>.
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix : 			<urn:com.scorpio4:>.
+
+#
+# IQ Behavioural Properties
+#
+
+:boot
+	rdfs:subPropertyOf	iq:triggers;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on start";
+	rdfs:domain			:Bootable;
+	rdfs:range  		:Behaviour;
+.
+
+:deploy
+	rdfs:subPropertyOf	iq:triggers;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on deploy";
+	rdfs:range  		:Behaviour;
+.
+
+:start
+	rdfs:subPropertyOf	iq:triggers;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on start";
+	rdfs:domain			:Startable;
+	rdfs:range  		:Behaviour;
+.
+
+:stop
+	rdfs:subPropertyOf	iq:triggers;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"on start";
+	rdfs:domain			:Startable;
+	rdfs:range  		:Behaviour;
+.

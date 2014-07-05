@@ -1,0 +1,112 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.scorpio4:>.
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix core:		<urn:com.scorpio4:core:>.
+@prefix : 			<urn:com.scorpio4:fact:>.
+
+:Creator
+	a					rdfs:Class;
+	rdfs:subClassOf		core:Doer;
+	rdfs:label			"Creator";
+	rdfs:comment 		"A Fact:Creator can create Models";
+	rdfs:isDefinedBy	:;
+.
+:Reader
+	a					rdfs:Class;
+	rdfs:subClassOf		core:Doer;
+	rdfs:label			"Reader";
+	rdfs:comment 		"A Fact:Reader can read Models";
+	rdfs:isDefinedBy	:;
+.
+:Updater
+	a					rdfs:Class;
+	rdfs:subClassOf		core:Doer;
+	rdfs:label			"Updater";
+	rdfs:comment 		"A Fact:Updater can update Models";
+	rdfs:isDefinedBy	:;
+.
+:Deleter
+	a					rdfs:Class;
+	rdfs:subClassOf		core:Doer;
+	rdfs:label			"Deleter";
+	rdfs:comment 		"A Fact:Deleter can delete Models";
+	rdfs:isDefinedBy	:;
+.
+:Curator
+	a					rdfs:Class;
+	rdfs:subClassOf		:Creator;
+	rdfs:subClassOf		:Deleter;
+	rdfs:subClassOf		:Updater;
+	rdfs:subClassOf		:Reader;
+	rdfs:label			"Curator";
+	rdfs:comment 		"A Fact:Curator can assert new ontologies";
+	rdfs:isDefinedBy	:;
+.
+
+:createdBy
+	a					owl:ObjectProperty;
+	rdfs:label			"created by";
+#	rdfs:domain			:CreatedResource;
+	rdfs:range			:Creator;
+.
+:readBy
+	a					owl:ObjectProperty;
+	rdfs:label			"read by";
+#	rdfs:domain			:ReadResource;
+	rdfs:range			:Reader;
+.
+:updatedBy
+	a					owl:ObjectProperty;
+	rdfs:label			"updated by";
+#	rdfs:domain			:UpdatedResource;
+	rdfs:range			:Updater;
+.
+:deletedBy
+	a					owl:ObjectProperty;
+	rdfs:label			"delete by";
+#	rdfs:domain			:DeletedResource;
+	rdfs:range			:Deleter;
+.
+:curatedBy
+	a					owl:ObjectProperty;
+	rdfs:label			"curated by";
+	rdfs:domain			:Curation;
+	rdfs:range			:Curator;
+.
+
+:createdOn
+	a					owl:ObjectProperty;
+	rdfs:label			"created on";
+#	rdfs:domain			:CreatedResource;
+	rdfs:range			xsd:datetime;
+.
+:readOn
+	a					owl:ObjectProperty;
+	rdfs:label			"read on";
+#	rdfs:domain			:ReadResource;
+	rdfs:range			xsd:datetime;
+.
+:updatedOn
+	a					owl:ObjectProperty;
+	rdfs:label			"updated on";
+#	rdfs:domain			:UpdatedResource;
+	rdfs:range			xsd:datetime;
+.
+:deletedOn
+	a					owl:ObjectProperty;
+	rdfs:label			"delete on";
+#	rdfs:domain			:DeletedResource;
+	rdfs:range			xsd:datetime;
+.
+:curatedOn
+	a					owl:ObjectProperty;
+	rdfs:label			"curated on";
+	rdfs:domain			:Curation;
+	rdfs:range			xsd:datetime;
+.

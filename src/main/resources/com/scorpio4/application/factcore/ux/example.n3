@@ -1,0 +1,164 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix iq:			<urn:com.scorpio4:>.
+@prefix ux:			<urn:com.scorpio4:ux:>.
+@prefix : 			<urn:com.scorpio4:application:com.scorpio4:ux:>.
+
+<urn:com.scorpio4:application:com.scorpio4:>
+	ux:start            :onStart;
+	ux:workspace		ux:listClasses;
+	ux:workspace		ux:listViews;
+.
+#
+# Example WorkSpace
+#
+:listClasses
+	a			    iq:Example;
+	ux:id			"listClasses";
+	rdfs:label	    "All Classes";
+	ux:views		:listClassesRenderer;
+    ux:type         ux:Grid;
+	ux:plan	[
+	    a           :Route;
+		ux:from 	:onSelect;
+		ux:to		:onFocus;
+	];
+.
+
+:listViews
+	a			    iq:Example;
+	ux:id		    "listViews";
+	rdfs:label	    "All Views";
+	ux:views		:listViewsRenderer;
+.
+
+:exampleQuery1
+	a			iq:Example;
+	a			ux:Behaviour;
+	ux:script	"console.log('Example Query: %o -> %o', this, that); return that;"^^<http://www.iana.org/assignments/media-types/application/ecmascript>;
+.
+
+# Global Routing of Backbone.Marionette events to UX (NB: events in :ux namespace are localized)
+
+<urn:com.scorpio4:ux:initialize:after>
+	ux:from		<urn:com.scorpio4:ux:initialize:after>;
+	ux:to		:onStart;
+.
+:from_render_to_onRender
+	ux:from		<urn:com.scorpio4:ux:render:after>;
+	ux:to		:onRender;
+.
+
+# Re-defining built-in (localized) route
+<urn:com.scorpio4:ux:boot:workspace>
+	ux:script	"""
+var workspace = new UX.WorkSpace(this, that);
+console.debug('Boot Workspace: %o %o -> %o %o', this, that, that.label, workspace);
+"""^^<http://www.iana.org/assignments/media-types/application/ecmascript>;
+.
+#
+# List Classes
+#
+
+:listClassesRenderer
+	a			    iq:Example;
+	ux:id			"all_examples";
+	rdfs:label	    "View all examples";
+	rdfs:comment	"A collection of example views";
+
+	ux:render	    :onRender;
+	ux:close	    :onClose;
+	ux:select	    :onSelect;
+
+	fact:model	    fact:exampleModel;
+	ux:renders	    :listClassesTemplate;
+
+	ux:contains	    :listClassesRendererthis;
+	ux:contains	    :listClassesRendererlabel;
+
+	ux:options      "{ isWorking: true, isConfigured: true }"^^<http://www.iana.org/assignments/media-types/text/json>;
+.
+
+:listClassesRendererthis
+	rdfs:label		"?this";
+	rdfs:comment	"Identity";
+	ux:field        <urn:com.scorpio4:application:com.scorpio4:model:concepts:columns:this>;
+.
+:listClassesRendererlabel
+	rdfs:label		"?label";
+	rdfs:comment	"Label";
+	ux:field        <urn:com.scorpio4:application:com.scorpio4:model:concepts:columns:label>;
+.
+
+:listClassesTemplate
+	ux:header	"<h1>{{label}}</h1>";
+	ux:body		"<div>{{this}} {{label}}</div>";
+	ux:footer	"<h4>{{this}}</h4>";
+.
+
+:onRender
+	rdfs:label	"Example onRender";
+	ux:script	"console.log('onRender: %o -> %o', this, that);"^^<http://www.iana.org/assignments/media-types/application/ecmascript>;
+.
+
+:onStart
+	rdfs:label	"Example onStart";
+	ux:script	"console.log('**** onStart: %o -> %o', this, that);"^^<http://www.iana.org/assignments/media-types/application/ecmascript>;
+.
+
+:onSelect
+	rdfs:label	"Example onSelect";
+	ux:script	"console.log('**** onSelect: %o -> %o', this, that);"^^<http://www.iana.org/assignments/media-types/application/ecmascript>;
+.
+
+:onFocus
+	rdfs:label	"Example onFocus";
+	ux:script	"console.log('**** onFocus: %o -> %o', this, that);"^^<http://www.iana.org/assignments/media-types/application/ecmascript>;
+.
+
+#
+# List Views
+#
+
+:listViewsRenderer
+	a			    iq:Example;
+	ux:id			"all_examples";
+	rdfs:label	    "View all examples";
+	rdfs:comment	"A collection of example views";
+
+	ux:render	    :onRender;
+	ux:close	    :onClose;
+	ux:select	    :onSelect;
+
+    ux:type         ux:Grid;
+	fact:model	    fact:exampleModel;
+	ux:renders	    :listViewsTemplate;
+
+	ux:contains	    :listViewsRendererthis;
+	ux:contains	    :listViewsRendererlabel;
+
+	ux:options      "{ isWorking: true, isConfigured: true }"^^<http://www.iana.org/assignments/media-types/text/json>;
+.
+
+:listViewsRendererthis
+	rdfs:label		"?this";
+	rdfs:comment	"Identity";
+	ux:field        <urn:com.scorpio4:application:com.scorpio4:model:concepts:columns:this>;
+.
+:listViewsRendererlabel
+	rdfs:label		"?label";
+	rdfs:comment	"Label";
+	ux:field        <urn:com.scorpio4:application:com.scorpio4:model:concepts:columns:label>;
+.
+
+:listViewsTemplate
+	ux:header	"<h1>{{label}}</h1>";
+	ux:body		"<div>{{this}} {{label}}</div>";
+	ux:footer	"<h4>{{this}}</h4>";
+.

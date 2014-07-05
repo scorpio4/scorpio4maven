@@ -1,0 +1,30 @@
+CONSTRUCT {
+	?s ?p ?o
+} WHERE {
+	<{{I}}> <urn:scorpio4:comprehends> ?vocab.
+	{
+		# comprehended verbs
+		?s ?p ?o.
+		?p rdfs:isDefinedBy ?vocab.
+	} UNION {
+		# comprehended objects
+		?s ?p ?o.
+		?o rdfs:isDefinedBy ?vocab.
+	} UNION {
+		# defined subjects
+		?s ?p ?o.
+		?s rdfs:isDefinedBy ?vocab.
+	} UNION {
+		# comprehended triggers/events
+		?s	?p	?o.
+		?x ?trigger ?s.
+		?trigger	rdfs:subPropertyOf <urn:scorpio4:do>.
+		?trigger	rdfs:isDefinedBy ?vocab.
+	} UNION {
+		# comprehended common properties (labels)
+		?s	?p	?o.
+		?p	rdfs:subPropertyOf rdfs:label.
+		?s	a	?type.
+		?type	rdfs:isDefinedBy ?vocab.
+	}
+}

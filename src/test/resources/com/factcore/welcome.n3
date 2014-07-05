@@ -1,7 +1,0 @@
-@prefix com.scorpio4: <http://scorpio4.com/vocab/v1/> .
-
-<urn:FactTools:>
-    a                   com.scorpio4:Instance;
-    rdfs:label          "Fact Tools";
-.
-

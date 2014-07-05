@@ -1,0 +1,6 @@
+SELECT DISTINCT ?this ?label
+WHERE {
+    ?this rdfs:isDefinedBy ?that.
+    ?this a rdfs:Class.
+    ?this rdfs:label  ?label.
+}

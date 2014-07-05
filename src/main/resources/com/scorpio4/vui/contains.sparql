@@ -1,0 +1,4 @@
+DESCRIBE <{{this}}>
+WHERE {
+GRAPH <{{_}}> {?s ?p ?o}
+}

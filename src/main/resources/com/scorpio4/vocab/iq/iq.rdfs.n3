@@ -1,0 +1,210 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.scorpio4:>.
+@prefix script:		<urn:com.scorpio4:script:>.
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix fab:		<urn:com.scorpio4:fab:>.
+@prefix : 			<urn:com.scorpio4:>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"IQ";
+	dc:title			"IQ vocabulary";
+	rdfs:comment		"Vocabulary for describing IQ Behaviour.";
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>;
+    fab:feature         "Contextual Knowledge Engine";
+    fab:benefit         "Create, organise, categorise, link, share your data, information and knowledge. Add rules, workflows, triggers or scripts to make it smarter. Then share your wisdom with your friends, family and colleague.";
+.
+
+:Application
+	a					rdfs:Class;
+	rdfs:label			"An Application";
+	rdfs:comment 		"A curated collection of user experiences";
+	rdfs:isDefinedBy	:;
+    iq:factory          "com.scorpio4.factory.ApplicationFactory";
+    fab:feature         "Build Knowledge Apps";
+    fab:benefit         "Apps provide a rich user experience to manage selected digital assets.";
+.
+
+:Resource
+	a					rdfs:Class;
+	rdfs:label			"A Resource";
+	rdfs:comment 		"An IQ Resource has a locally unique identity";
+	rdfs:isDefinedBy	:;
+.
+
+:Behaviour
+	rdfs:label			"Behaviour";
+	rdfs:comment 		"IQ behaviour";
+	rdfs:isDefinedBy	:;
+.
+
+:Ability
+	rdfs:label			"Ability";
+	rdfs:comment 		"Abilities exhibit Behaviours";
+	rdfs:isDefinedBy	:;
+    iq:factory          "com.scorpio4.factory.AbilityFactory";
+.
+
+:Capability
+	rdfs:label			"Script Capability";
+	rdfs:comment 		"Capabilities enhance Scripted Behaviours";
+	rdfs:isDefinedBy	:;
+.
+
+:ScriptedBehaviour
+	rdfs:subClassOf		:Behaviour;
+	rdfs:label			"Scripted Behaviour";
+	rdfs:comment 		"Custom logic expressed as an IQ script";
+	rdfs:isDefinedBy	:;
+.
+
+:Javascript
+	rdfs:subClassOf		:ScriptedBehaviour;
+	rdfs:label			"Javascript";
+
+	rdfs:comment 		"A Javascript script that provides some IQ behaviour ";
+	rdfs:isDefinedBy	:;
+.
+
+:Groovy
+	rdfs:subClassOf		:ScriptedBehaviour;
+	rdfs:label			"Groovy Script";
+	rdfs:comment 		"A Groovy implementation of IQ behaviour ";
+	rdfs:isDefinedBy	:;
+.
+
+:Query
+	rdfs:subClassOf		:ScriptedBehaviour;
+	rdfs:label			"Query";
+	rdfs:comment 		"An IQ Query";
+	rdfs:isDefinedBy	:;
+.
+
+:SPARQL
+	rdfs:subClassOf		:Query;
+	rdfs:label			"SPARQL Query";
+	rdfs:comment 		"IQ behaviour implemented as a SPARQL inference";
+	rdfs:isDefinedBy	:;
+.
+
+:Camel
+	rdfs:subClassOf		:Behaviour;
+	rdfs:label			"Camel Route";
+	rdfs:comment 		"A Camel implementation of IQ behaviour ";
+	rdfs:isDefinedBy	:;
+.
+
+:Activiti
+	rdfs:subClassOf		:Behaviour;
+	rdfs:label			"Activiti";
+	rdfs:comment 		"An Activiti implementation of IQ behaviour ";
+	rdfs:isDefinedBy	:;
+.
+
+
+
+:Configuration
+	rdfs:label			"Configuration";
+	rdfs:comment 		"A Configuration";
+	rdfs:isDefinedBy	:;
+.
+
+#
+# IQ Core Properties
+#
+
+:id
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"id";
+	rdfs:domain			:Resource;
+	rdfs:range  		xsd:string;
+.
+:type
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"type";
+	rdfs:domain			:Resource;
+	rdfs:range  		xsd:string;
+.
+
+:do
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"do";
+	rdfs:domain			:Awareness;
+	rdfs:range  		:Behaviour;
+.
+
+:script
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"source code";
+	rdfs:domain			:ScriptedBehaviour;
+	rdfs:range  		xsd:string;
+.
+
+:classname
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"classname";
+	rdfs:range  		xsd:string;
+.
+
+:triggers
+	a					owl:ObjectProperty;
+	rdfs:subPropertyOf	:do;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"triggers";
+	rdfs:domain			:Awareness;
+	rdfs:range  		:Behaviour;
+.
+
+:query
+	rdfs:subPropertyOf	:script;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"query";
+	rdfs:domain  		:Query;
+	rdfs:range  		xsd:string;
+.
+
+:comprehends
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"comprehends";
+	rdfs:range  		owl:Ontology;
+.
+
+:factory
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"class factory";
+	rdfs:range  		xsd:string;
+.
+
+#:exhibits
+#	rdfs:isDefinedBy	:;
+#	rdfs:label 			"exhibits";
+#	rdfs:domain			:Ability;
+#	rdfs:range  		:Ability;
+#.
+
+:comprises
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"comprises";
+	rdfs:domain			:IQ;
+	rdfs:range  		:Application;
+.
+
+:bean
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"bean";
+	rdfs:comment        "An injected java bean";
+	rdfs:range  		:Bean;
+.

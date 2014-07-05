@@ -1,0 +1,25 @@
+SELECT DISTINCT ?this ?label ?order ?comment ?template ?x ?y ?z ?rx ?ry ?rz
+WHERE {
+    ?that   a   slide:Deck.
+    ?that   slide:contains  ?this.
+    ?this   rdfs:label      ?label.
+    OPTIONAL {
+    ?this       ux:renders  ?_template.
+    ?_template  ux:body     ?template;
+    OPTIONAL {
+        ?this   rdfs:comment    ?comment.
+    }
+    OPTIONAL {
+        ?this   ux:order        ?order.
+    }
+    OPTIONAL {
+        ?this   ux:x            ?x.
+        ?this   ux:y            ?y.
+        ?this   ux:z            ?z.
+    }
+    OPTIONAL {
+        ?this   ux:rx           ?rx.
+        ?this   ux:ry           ?ry.
+        ?this   ux:rz           ?rz.
+    }
+} BINDINGS ?that { (<{{this}}>) }

@@ -1,0 +1,113 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<urn:com.scorpio4:>.
+@prefix bot:		<urn:com.scorpio4:bot:>.
+@prefix : 			<urn:example:bot:>.
+
+:hi
+    bot:hears       "hi";
+    bot:rephrase    "hello";
+    bot:is          :example;
+.
+
+:hello
+    bot:hears       "hello";
+    bot:say         "Hi there";
+    bot:is          :example;
+.
+
+:howdy
+    bot:hears       "howdy";
+    bot:rephrase    "hello";
+    bot:is          :example;
+.
+
+:hey
+    bot:hears       "hey";
+    bot:rephrase    "hello";
+    bot:is          :example;
+.
+
+:greetings
+    bot:hears       "greetings";
+    bot:rephrase    "hello";
+    bot:is          :example;
+.
+
+:how-are-you
+    bot:hears       "how are you";
+    bot:say         "I am {{mood}}. Thanks for asking.";
+    bot:is          :example;
+.
+
+:name
+    bot:hears       "name";
+    bot:say         "I am Joshua";
+    bot:is          :example;
+.
+
+:what-is-your-name
+    bot:hears       "what is your name";
+    bot:rephrase    "name";
+    bot:is          :example;
+.
+
+:who-are-you
+    bot:hears       "who are you";
+    bot:rephrase    "name";
+    bot:is          :example;
+.
+
+:why-are-you
+    bot:hears       "why are you";
+    bot:say         "I think, therefore I am";
+    bot:is          :example;
+.
+
+:what-are-you
+    bot:hears       "what are you";
+    bot:say         "I am an Artificial Intelligence, a thinking machine.";
+    bot:is          :example;
+.
+
+:what-is-joshua
+    bot:hears       "what is joshua";
+    bot:rephrase    "what are you";
+    bot:is          :example;
+.
+
+:what-is-ai
+    bot:hears       "what is ai";
+    bot:say         "A.I. are thinking machines";
+    bot:is          :example;
+.
+
+:are-you
+    bot:hears       "are you";
+    bot:say         "I am Artificial.";
+    bot:is          :example;
+.
+
+:who-made-you
+    bot:hears       "who made you";
+    bot:say         "Lee made me";
+    bot:is          :example;
+.
+
+:who-is-lee
+    bot:hears       "who is lee";
+    bot:say         "Lee is my creator";
+.
+
+:introduction
+    bot:knows       :hello;
+    bot:knows       :what-is-your-name;
+    bot:say         "It's nice to meet you";
+    bot:is          :example;
+.
+

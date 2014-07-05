@@ -1,0 +1,114 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix fact:		<urn:com.scorpio4:fact:>.
+@prefix iq:			<urn:com.scorpio4:>.
+@prefix vui:		<urn:com.scorpio4:vui:>.
+@prefix : 			<urn:com.scorpio4:vui:>.
+
+:Field
+    rdfs:subClassOf :Component;
+    rdfs:label      "Field";
+    rdfs:comment    "A VUI Field";
+	rdfs:isDefinedBy	:;
+.
+
+:Form
+    rdfs:subClassOf :Field;
+    rdfs:label      "Form";
+    rdfs:comment    "A VUI Form";
+    iq:classname    "com.vaadin.ui.Form";
+	rdfs:isDefinedBy	:;
+.
+
+:FieldGroup
+    rdfs:subClassOf :Field;
+    rdfs:label      "Field Group";
+    rdfs:comment    "A VUI field group Form";
+    iq:classname    "com.vaadin.ui.FieldGroup";
+	rdfs:isDefinedBy	:;
+.
+
+:Label
+    rdfs:subClassOf :Field;
+    rdfs:label      "Label";
+    rdfs:comment    "A VUI Label";
+    iq:classname    "com.vaadin.ui.Label";
+	rdfs:isDefinedBy	:;
+.
+
+:Button
+    rdfs:subClassOf :Field;
+    rdfs:label      "Button";
+    rdfs:comment    "A VUI Button";
+    iq:classname    "com.vaadin.ui.Button";
+	rdfs:isDefinedBy	:;
+.
+
+:CheckBox
+    rdfs:subClassOf :Button;
+    rdfs:label      "CheckBox";
+    rdfs:comment    "A VUI CheckBox";
+    iq:classname    "com.vaadin.ui.CheckBox";
+	rdfs:isDefinedBy	:;
+.
+
+:TextField
+    rdfs:subClassOf :Field;
+    rdfs:label      "Text Field";
+    rdfs:comment    "A VUI Text Field";
+    iq:classname    "com.vaadin.ui.TextField";
+	rdfs:isDefinedBy	:;
+.
+
+:RichTextArea
+    rdfs:subClassOf :TextField;
+    rdfs:label      "Text Pad";
+    rdfs:comment    "A VUI Rich Text Editor";
+    iq:classname    "com.vaadin.ui.RichTextArea";
+	rdfs:isDefinedBy	:;
+.
+
+:Date
+    rdfs:subClassOf :Field;
+    rdfs:label      "Date";
+    rdfs:comment    "A VUI Date";
+    iq:classname    "com.vaadin.ui.Date";
+	rdfs:isDefinedBy	:;
+.
+
+:InlineDateField
+    rdfs:subClassOf :Date;
+    rdfs:label      "Inline Date";
+    rdfs:comment    "An inline VUI Date";
+    iq:classname    "com.vaadin.ui.InlineDateField";
+	rdfs:isDefinedBy	:;
+.
+
+:PopupDateField
+    rdfs:subClassOf :Field;
+    rdfs:label      "Popup Date";
+    rdfs:comment    "A VUI Popup Date";
+    iq:classname    "com.vaadin.ui.PopupDateField";
+	rdfs:isDefinedBy	:;
+.
+
+:ProgressIndicator
+    rdfs:subClassOf :Field;
+    rdfs:label      "Progress";
+    rdfs:comment    "A VUI Progress Indicator";
+    iq:classname    "com.vaadin.ui.ProgressIndicator";
+	rdfs:isDefinedBy	:;
+.
+
+:Slider
+    rdfs:subClassOf :ProgressIndicator;
+    rdfs:label      "Slider";
+    rdfs:comment    "A VUI Slider";
+    iq:classname    "com.vaadin.ui.Slider";
+	rdfs:isDefinedBy	:;
+.

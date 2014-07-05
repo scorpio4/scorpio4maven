@@ -1,0 +1,26 @@
+CONSTRUCT {
+	?view	a				ux:Widget.
+	?view	rdfs:label		?table_label.
+	?view	rdfs:comment	?table_comment.
+	?view	ux:contains 	?col.
+	?col	ux:id			?col_id.
+	?col	ux:field		?field.
+	?col	rdfs:label		?field_label.
+	?col	rdfs:comment	?field_comment.
+} WHERE {
+	?table rdfs:isDefinedBy <{{schema}}>.
+	?table	rdfs:label	?table_label.
+	OPTIONAL {
+		?table	rdfs:comment	?table_comment.
+	}
+	?field	rdfs:domain ?table.
+	?field	a sql:Column.
+	?field	rdfs:label	?field_label.
+	?field	sql:as	?col_id.
+	OPTIONAL {
+		?field	rdfs:comment	?field_comment.
+	}
+	BIND(fn:contrive("urn:scorpio4:view:",?table) AS ?view)
+	BIND(fn:contrive("urn:scorpio4:view:",?field) AS ?col)
+
+}

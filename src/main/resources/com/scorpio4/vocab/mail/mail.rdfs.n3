@@ -1,0 +1,171 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix mail: 		<urn:com.scorpio4:mail:>.
+@prefix : 			<urn:com.scorpio4:mail:>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"Mail";
+	dc:title			"Mail vocabulary";
+	rdfs:comment		"Vocabulary for describing Email.";
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>
+.
+
+:Message
+	a					rdfs:Class;
+	rdfs:label			"A Message";
+	rdfs:comment 		"An Email Message";
+	rdfs:isDefinedBy	:;
+.
+
+:Folder
+	a					rdfs:Class;
+	rdfs:label			"Folder";
+	rdfs:comment 		"An Email Folder";
+	rdfs:isDefinedBy	:;
+.
+
+:Store
+	a					rdfs:Class;
+	rdfs:label			"email service";
+	rdfs:comment 		"An Email Store";
+	rdfs:isDefinedBy	:;
+.
+
+:Part
+	rdfs:label			"Message Part";
+	rdfs:comment 		"Message Part";
+	rdfs:isDefinedBy	:;
+.
+
+:Attachment
+	rdfs:label			"Attachment";
+	rdfs:comment 		"An Email Attachment";
+	rdfs:isDefinedBy	:;
+.
+
+:Sender
+	rdfs:label			"Sender";
+	rdfs:comment 		"Sender's Email Address";
+	rdfs:isDefinedBy	:;
+.
+
+:Recipient
+	rdfs:label			"Recipient";
+	rdfs:comment 		"Recipient's Email Address";
+	rdfs:isDefinedBy	:;
+.
+
+
+#
+# Email Properties
+#
+
+:filename
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"filename";
+	rdfs:domain			:Resource;
+	rdfs:range  		xsd:string;
+.
+:part
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"has part";
+	rdfs:domain			:Message;
+	rdfs:range  		:Part;
+.
+
+:file
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"attached file";
+	rdfs:domain			:Attachment;
+.
+
+:contains
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"contains";
+	rdfs:domain			:Folder;
+	rdfs:range  		:Message;
+.
+
+:stores
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"stores";
+	rdfs:domain			:Store;
+	rdfs:range  		:Folder;
+.
+
+:type
+	a					rdf:Property;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"content type";
+.
+
+
+:agent
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"agent";
+.
+
+
+:to
+	rdfs:subPropertyOf  :agent;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"from";
+	rdfs:domain			:Message;
+	rdfs:range  		:Recipient;
+.
+:from
+	rdfs:subPropertyOf  :agent;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"from";
+	rdfs:domain			:Message;
+	rdfs:range  		:Sender;
+.
+:cc
+	rdfs:subPropertyOf  :agent;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"cc";
+	rdfs:domain			:Message;
+	rdfs:range  		:Recipient;
+.
+:bcc
+	rdfs:subPropertyOf  :agent;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"bcc";
+	rdfs:domain			:Message;
+	rdfs:range  		:Recipient;
+.
+:replyTo
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"reply to";
+	rdfs:domain			:Message;
+	rdfs:range  		:Recipient;
+.
+:personal
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"name";
+	rdfs:domain			:Recipient;
+	rdfs:range  		xsd:string;
+.
+
+:header
+	a					owl:DatatypeProperty;
+	rdfs:label			"header";
+	rdfs:comment 		"Email Header";
+	rdfs:isDefinedBy	:;
+.
+

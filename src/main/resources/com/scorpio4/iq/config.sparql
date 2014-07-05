@@ -1,0 +1,5 @@
+SELECT DISTINCT ?name ?value WHERE {
+?that iq:configuration ?this.
+	?this
+		?name   ?value;
+} BINDINGS ?that { (<{{this}}>) }

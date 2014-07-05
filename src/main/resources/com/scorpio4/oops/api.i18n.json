@@ -1,0 +1,5 @@
+{
+    "urn:com.scorpio4:fact:oops:api-error": {
+        label: "API Error"
+    }
+}

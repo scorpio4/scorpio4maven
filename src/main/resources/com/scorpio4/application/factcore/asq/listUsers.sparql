@@ -1,0 +1,8 @@
+SELECT DISTINCT ?this ?label ?comment
+WHERE {
+    ?this a             user:Agent;
+        rdfs:label      ?label.
+    OPTIONAL {
+    ?this    rdfs:comment    ?comment;
+    }
+}

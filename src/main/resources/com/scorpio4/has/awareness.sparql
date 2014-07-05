@@ -1,0 +1,10 @@
+SELECT DISTINCT ?this ?from ?for ?to WHERE {
+?that iq:aware ?this.
+	?this
+		iq:from ?from;
+		iq:to	?to.
+OPTIONAL {
+	?this	iq:for		?query.
+	?query	iq:query	?for.
+}
+} BINDINGS ?that { (<{{this}}>) }

@@ -1,0 +1,11 @@
+SELECT ?this ?label (COUNT(distinct ?that) AS ?total)
+WHERE {
+    ?this rdf:type owl:Ontology.
+    OPTIONAL {
+        ?this rdfs:label ?label
+    }
+    ?that rdfs:isDefinedBy ?this.
+    ?that rdf:type  rdfs:Class.
+} GROUP BY ?this ?label
+ORDER BY DESC(?total)
+

@@ -1,0 +1,8 @@
+SELECT ?this
+        WHERE {
+            ?this   bot:learns <urn:example:hello>
+        }
+        UNION {
+            ?that   bot:learns <urn:example:what-is-your-name>
+        }
+}

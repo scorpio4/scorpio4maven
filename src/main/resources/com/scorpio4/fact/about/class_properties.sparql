@@ -1,0 +1,8 @@
+SELECT DISTINCT ?that ?this ?label ?comment ?range WHERE {
+	?this	rdfs:domain ?that;
+			rdfs:label ?label;
+			rdfs:range ?range.
+	OPTIONAL { ?this rdfs:comment ?comment. }
+}
+ORDER BY ?that ?label
+BINDINGS ?that { (<{{this}}>) }

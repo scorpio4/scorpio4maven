@@ -1,0 +1,1 @@
+    SELECT DISTINCT ?this ?label WHERE { ?this a <urn:scorpio4:QueryScript>. OPTIONAL { ?this rdfs:label ?label. } }
