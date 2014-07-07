@@ -1,7 +1,6 @@
 package com.scorpio4.mojo;
 
 import com.scorpio4.deploy.Scorpio4SesameDeployer;
-import com.scorpio4.runtime.Engine;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,10 +35,6 @@ public class EngineMojo extends BaseFactToolsMojo {
 		scorpio4SesameDeployer.setDeployScripts(true);
 		scorpio4SesameDeployer.deploy(getSrcPath());
 
-		Engine engine = new Engine(getIdentity(), repositoryManager, getConfig());
-		engine.start();
-		engine.run();
-		engine.stop();
 	}
 
 	public Map<String,String> getConfig() {
