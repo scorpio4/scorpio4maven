@@ -1,10 +1,9 @@
 package com.scorpio4.mojo;
 
 import com.scorpio4.deploy.Scorpio4SesameDeployer;
+import com.scorpio4.runtime.Engine;
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 /**
  * Scorpio4 (c) 2014
@@ -15,9 +14,9 @@ import java.util.Properties;
  */
 
 /**
- * Semantic Engine
+ * Maven Engine
  *
- * @goal run
+ * @goal Start Engines
  * @requiresProject true
  * @phase process-sources
  */
@@ -35,22 +34,15 @@ public class EngineMojo extends BaseFactToolsMojo {
 		scorpio4SesameDeployer.setDeployScripts(true);
 		scorpio4SesameDeployer.deploy(getSrcPath());
 
-	}
-
-	public Map<String,String> getConfig() {
-		Map map = new HashMap<String,String>();
-		Properties properties = getProject().getProperties();
-		for(Object property: properties.keySet()) {
-			String key = property.toString();
-			key = key.replace(".","_");
-			Object value = properties.get(property);
-			boolean isLocal = key.startsWith("scorpio4_")||key.startsWith("scorpio4:");
-			if (value!=null&&isLocal) {
-				map.put(key, value.toString());
-			}
+		Map<String,String> config = getConfig();
+		getLog().debug("Configuration: "+config);
+		Engine engine = new Engine(getIdentity(), getRepositoryManager(), config);
+		engine.start();
+		while(engine.isRunning()) {
+			Thread.sleep(100);
 		}
-		return map;
-
+		engine.stop();
 	}
+
 
 }

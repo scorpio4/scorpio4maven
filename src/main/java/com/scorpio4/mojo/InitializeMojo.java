@@ -34,8 +34,8 @@ public class InitializeMojo extends BaseFactToolsMojo {
     @Override
     public void executeInternal() throws FactException, IOException {
 
-        getLog().info("Deleting: " + getTempPath().getAbsolutePath());
-        FileUtils.deleteDirectory(getTempPath());
+        getLog().info("Deleting: " + getHomePath().getAbsolutePath());
+        FileUtils.deleteDirectory(getHomePath());
 
         try {
             repository = newLocalRepository();

@@ -34,7 +34,7 @@ public class DumpMojo extends BaseFactToolsMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, QueryEvaluationException, MalformedQueryException, RDFHandlerException {
-        File file = new File(getTempPath(), getAppName()+".dump.n3");
+        File file = new File(getHomePath(), getAppName()+".dump.n3");
 
         SPARQLer sparqLer = new SPARQLer(getFactSpace());
         Asset asset = getAsset("mojo/dump", COMMON.MIME_SPARQL);
