@@ -1,6 +1,0 @@
-SELECT DISTINCT ?this ?label WHERE {
-    ?this a skos:Concept.
-    ?this skos:prefLabel ?label.
-    ?this skos:inScheme ?that.
-}
-BINDINGS ?that { (<{{this}}>) }

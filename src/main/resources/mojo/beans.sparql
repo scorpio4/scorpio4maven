@@ -1,7 +1,7 @@
-prefix flo: 		<http://scorpio4.com/vocab/v1/flo/>
+prefix bean: 		<http://scorpio4.com/v1/vocab/bean/>
 
 SELECT DISTINCT ?this ?class
 WHERE {
 ?this a ?class.
-?class a flo:Bean.
+?class a bean:Bean.
 }

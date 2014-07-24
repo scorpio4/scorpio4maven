@@ -1,4 +1,0 @@
-SELECT DISTINCT ?that ?this
-WHERE {
-	?that <urn:scorpio4:script> ?this.
-}

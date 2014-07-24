@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Scorpio4 (c) 2014
  * Module: com.scorpio4.maven
- * User  : lee
+ * @author lee
  * Date  : 16/06/2014
  * Time  : 5:38 PM
  */
@@ -16,19 +16,18 @@ import java.util.Map;
 /**
  * Maven Engine
  *
- * @goal Start Engines
+ * @goal Start Engine
  * @requiresProject true
  * @phase process-sources
  */
 
-public class EngineMojo extends BaseFactToolsMojo {
-	boolean running = true;
+public class EngineMojo extends ScorpioMojo {
 
 	@Override
 	public void executeInternal() throws Exception {
-		getLog().info("Camel API: " + getIdentity());
+		getLog().info("Booting Scorpio4 @ " + getIdentity());
 
-		Scorpio4SesameDeployer scorpio4SesameDeployer = new Scorpio4SesameDeployer(getFactSpace());
+		Scorpio4SesameDeployer scorpio4SesameDeployer = new Scorpio4SesameDeployer(getIdentity(), getConnection());
 		scorpio4SesameDeployer.clean();
 		scorpio4SesameDeployer.setDeployRDF(true);
 		scorpio4SesameDeployer.setDeployScripts(true);
@@ -37,10 +36,13 @@ public class EngineMojo extends BaseFactToolsMojo {
 		Map<String,String> config = getConfig();
 		getLog().debug("Configuration: "+config);
 		Engine engine = new Engine(getIdentity(), getRepositoryManager(), config);
+
 		engine.start();
+		getLog().info("Started: " + getIdentity());
 		while(engine.isRunning()) {
-			Thread.sleep(100);
+			Thread.sleep(1000);
 		}
+		getLog().info("Stopping: " + getIdentity());
 		engine.stop();
 	}
 

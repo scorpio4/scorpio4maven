@@ -1,8 +1,0 @@
-SELECT DISTINCT ?this ?label ?comment
-WHERE {
-    ?this   a   slide:Deck.
-    ?this   rdfs:label      ?label.
-    OPTIONAL {
-        ?this   rdfs:comment    ?comment.
-    }
-}

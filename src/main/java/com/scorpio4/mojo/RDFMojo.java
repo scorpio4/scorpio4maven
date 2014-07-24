@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Scorpio4 (c) 2014
  * Module: com.scorpio4.maven
- * User  : lee
+ * @author lee
  * Date  : 16/06/2014
  * Time  : 5:38 PM
  */
@@ -23,7 +23,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-public class RDFMojo extends BaseFactToolsMojo {
+public class RDFMojo extends ScorpioMojo {
 
     @Override
     public void executeInternal() throws FactException, IOException, RepositoryException {
@@ -33,7 +33,7 @@ public class RDFMojo extends BaseFactToolsMojo {
         getConnection().clear();
 	    getConnection().commit();
 
-        Scorpio4SesameDeployer scorpio4SesameDeployer = new Scorpio4SesameDeployer(getFactSpace());
+        Scorpio4SesameDeployer scorpio4SesameDeployer = new Scorpio4SesameDeployer(getIdentity(), getConnection());
         scorpio4SesameDeployer.setDeployRDF(true);
         scorpio4SesameDeployer.setDeployScripts(false);
 

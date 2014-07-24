@@ -1,3 +1,3 @@
 SELECT DISTINCT ?this WHERE {
-    ?this <http://scorpio4.com/vocab/v1/iq/runs> ?x.
+    ?this <http://scorpio4.com/v1/vocab/runs> ?x.
 } BINDINGS ?this { (<{{it.this}}>) }

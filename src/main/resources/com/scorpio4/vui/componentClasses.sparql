@@ -1,6 +1,0 @@
-SELECT DISTINCT ?this ?classname
-WHERE {
-    ?this rdfs:subClassOf   vui:Component;
-          iq:classname      ?classname;
-}
-

@@ -1,4 +1,0 @@
-SELECT (COUNT(distinct ?this) AS ?total)
-WHERE {
-    ?this rdf:type owl:Ontology.
-}

@@ -23,7 +23,7 @@ package com.scorpio4.mojo;
  * 
  * @phase process-sources
  */
-public class CurateSQLMojo extends BaseDBAMojo
+public class CurateSQLMojo extends ScorpioMojo
 {
 	@Override
 	public void executeInternal() throws Exception {

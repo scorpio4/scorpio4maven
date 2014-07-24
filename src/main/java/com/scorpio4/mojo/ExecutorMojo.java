@@ -21,7 +21,7 @@ import java.util.concurrent.Future;
 /**
  * Scorpio4 (c) 2014
  * Module: com.scorpio4.maven
- * User  : lee
+ * @author lee
  * Date  : 16/06/2014
  * Time  : 5:39 PM
  */
@@ -32,20 +32,20 @@ import java.util.concurrent.Future;
  * @requiresProject true
  * @phase process-sources
  */
-public class ExecutorMojo extends BaseFactToolsMojo {
+public class ExecutorMojo extends ScorpioMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, ExecutionException, IQException, InterruptedException, AssetNotSupported {
-        getLog().info("Executing ToolChain: "+getIdentity());
+        getLog().info("Executing Mojo: "+getIdentity());
 
         Map meta = new HashMap();
         Map it = new HashMap();
         meta.put("it", it);
         it.put("this", getIdentity());
 
-        Executor executor = new Executor(getFactSpace(), assetRegister);
+        Executor executor = new Executor(getConnection(), getIdentity(), assetRegister);
 
-        executor.addExecutable(new Inferring(getFactSpace()));
+        executor.addExecutable(new Inferring(getRepository()));
         executor.addExecutable(new Scripting());
         executor.addExecutable(new Templating());
 
@@ -53,7 +53,7 @@ public class ExecutorMojo extends BaseFactToolsMojo {
         Collection<Map> rules = sesameCRUD.read("mojo/toolchain", meta);
         for(Map rule:rules) {
             String ruleURI = (String) rule.get("this");
-            getLog().info("ToolChain: "+ruleURI);
+            getLog().info("MoJo Rule: "+ruleURI);
             Map<String, Future> ran = executor.run(ruleURI, meta);
             getLog().info("Result: "+ruleURI+" empty: "+ran.isEmpty()+"  -> "+ran);
         }

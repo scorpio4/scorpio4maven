@@ -1,4 +1,4 @@
-PREFIX toolchain: 	<http://scorpio4.com/vocab/v1/toolchain/>
+PREFIX toolchain: 	<http://scorpio4.com/v1/vocab/toolchain/>
 
 SELECT DISTINCT ?this WHERE {
     ?this a toolchain:Fatal.

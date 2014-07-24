@@ -1,7 +1,0 @@
-CONSTRUCT {
-	?s vui:contains ?o.
-}
-WHERE {
-	?s vui:contains ?p.
-	?p vui:contains ?o.
-}

@@ -1,4 +1,0 @@
-SELECT DISTINCT ?that (COUNT(distinct ?this) AS ?total)
-WHERE { ?this rdf:type ?that }
-GROUP BY ?that
-ORDER BY DESC(?total)

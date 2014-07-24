@@ -1,4 +1,0 @@
-SELECT DISTINCT ?this ?label WHERE {
-    ?this a skos:ConceptScheme.
-    ?this skos:prefLabel ?label
-}

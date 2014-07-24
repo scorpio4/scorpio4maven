@@ -27,8 +27,4 @@
     <logger name="http." level="ERROR" />
     <logger name="httpclient." level="ERROR" />
 
-
-    <logger name="com.scorpio4" level="TRACE"/>
-    <logger name="com.com.scorpio4.examples" level="TRACE"/>
-
 </configuration>

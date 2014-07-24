@@ -28,7 +28,7 @@ import java.util.Properties;
 /**
  * Scorpio4 (c) 2014
  * Module: com.scorpio4.maven
- * User  : lee
+ * @author lee
  * Date  : 16/06/2014
  * Time  : 5:36 PM
  */
@@ -37,19 +37,24 @@ public abstract class ScorpioMojo extends AbstractMojo {
 	public String identity = null;
 	String PROPS_PREFIX = "scorpio4";
 
-//    public MavenProject project;
+	/**
+	 * @parameter default-value="${project}"
+	 * @required
+	 * @readonly
+	 */
+	public MavenProject project;
 
 	public Repository repository = null;
-	public RepositoryConnection connection = null;
 	public AssetRegister assetRegister;
 	public RepositoryManager repositoryManager;
+	protected FactSpace factSpace;
 
 	public ScorpioMojo() {
     }
 
     public void initialize() throws MojoFailureException, RepositoryException, MalformedURLException, RepositoryConfigException {
         Hashtable properties = getProject().getProperties();
-        this.identity = MapUtil.getString(properties, PROPS_PREFIX +".id", null);
+        this.identity = MapUtil.getString(properties, PROPS_PREFIX + ".id", null);
         if (this.identity==null) throw new MojoFailureException("Missing <scorpio4.id>");
 
         this.srcPath = MapUtil.getFile(properties, PROPS_PREFIX +".src.path", getProject().getBasedir() );
@@ -63,20 +68,22 @@ public abstract class ScorpioMojo extends AbstractMojo {
     protected void initializeRepository() throws RepositoryException, MalformedURLException, RepositoryConfigException {
 	    this.repositoryManager = new RepositoryManager(getHomePath());
 	    this.repository = repositoryManager.getRepository(getIdentity());
-        this.connection = repository.getConnection();
 	    getLog().info("Repository: "+getIdentity()+" @ "+ getHomePath());
-        this.assetRegister = new AssetRegisters(connection);
+	    this.factSpace = new FactSpace(getIdentity(),getRepository());
+	    this.assetRegister = new AssetRegisters(factSpace.getConnection());
     }
 
     public void finished() throws RepositoryException {
-        if (connection!=null && connection.isOpen()) connection.close();
+        if (factSpace!=null) factSpace.close();
         if (repository!=null && repository.isInitialized()) repository.shutDown();
         getLog().info("Finished MoJo: "+getClass().getSimpleName());
     }
 
-    public abstract MavenProject getProject();
+	public MavenProject getProject() {
+		return project;
+	}
 
-    public File getSrcPath() {
+	public File getSrcPath() {
         return srcPath;
     }
 
@@ -108,8 +115,8 @@ public abstract class ScorpioMojo extends AbstractMojo {
         return repository;
     }
 
-    public RepositoryConnection getConnection() {
-        return connection;
+    public RepositoryConnection getConnection() throws RepositoryException {
+        return getFactSpace().getConnection();
     }
 
     @Override
@@ -127,10 +134,6 @@ public abstract class ScorpioMojo extends AbstractMojo {
                 throw new MojoExecutionException("Repository Shutdown Error", e);
             }
         }
-    }
-
-    public FactSpace getFactSpace() {
-        return new FactSpace(getConnection(), getIdentity());
     }
 
 	public AssetRegister getAssetRegister() {
@@ -153,7 +156,7 @@ public abstract class ScorpioMojo extends AbstractMojo {
 
     public Repository newSandboxRepository(Map properties) throws RepositoryException {
         String host = MapUtil.getString(properties, PROPS_PREFIX +".upload.host", null);
-        String name = MapUtil.getString(properties, PROPS_PREFIX +".upload.name", null);
+        String name = MapUtil.getString(properties, PROPS_PREFIX + ".upload.name", null);
         File dataDir = new File(homePath, "sandbox");
         dataDir.mkdirs();
 
@@ -182,6 +185,9 @@ public abstract class ScorpioMojo extends AbstractMojo {
 			}
 		}
 		return map;
+	}
 
+	public FactSpace getFactSpace() {
+		return factSpace;
 	}
 }

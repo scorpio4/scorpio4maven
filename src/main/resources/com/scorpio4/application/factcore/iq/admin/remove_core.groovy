@@ -1,1 +1,0 @@
-package com.scorpio4.application.scorpio4.iq.admin

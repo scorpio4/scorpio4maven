@@ -3,8 +3,8 @@ package com.scorpio4.mojo;
 import com.scorpio4.assets.Asset;
 import com.scorpio4.oops.ConfigException;
 import com.scorpio4.oops.FactException;
-import com.scorpio4.vendor.sesame.io.SPARQLer;
-import com.scorpio4.vocab.COMMON;
+import com.scorpio4.vendor.sesame.io.SPARQLRules;
+import com.scorpio4.vocab.COMMONS;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.repository.RepositoryException;
@@ -16,7 +16,7 @@ import java.io.IOException;
 /**
  * Scorpio4 (c) 2014
  * Module: com.scorpio4.mojo
- * User  : lee
+ * @author lee
  * Date  : 18/06/2014
  * Time  : 12:58 AM
  */
@@ -30,15 +30,15 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-public class DumpMojo extends BaseFactToolsMojo {
+public class DumpMojo extends ScorpioMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, QueryEvaluationException, MalformedQueryException, RDFHandlerException {
         File file = new File(getHomePath(), getAppName()+".dump.n3");
 
-        SPARQLer sparqLer = new SPARQLer(getFactSpace());
-        Asset asset = getAsset("mojo/dump", COMMON.MIME_SPARQL);
-        sparqLer.copy(asset.toString(), file);
+        SPARQLRules SPARQLRules = new SPARQLRules(getConnection(),getIdentity());
+        Asset asset = getAsset("mojo/dump", COMMONS.MIME_SPARQL);
+        SPARQLRules.apply(asset.toString(), file);
         getLog().info("Dumped to "+file.getAbsolutePath());
     }
 }

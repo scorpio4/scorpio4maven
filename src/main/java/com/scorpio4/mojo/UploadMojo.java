@@ -3,8 +3,8 @@ package com.scorpio4.mojo;
 import com.scorpio4.assets.Asset;
 import com.scorpio4.oops.ConfigException;
 import com.scorpio4.oops.FactException;
-import com.scorpio4.vendor.sesame.io.SPARQLer;
-import com.scorpio4.vocab.COMMON;
+import com.scorpio4.vendor.sesame.io.SPARQLRules;
+import com.scorpio4.vocab.COMMONS;
 import org.openrdf.query.MalformedQueryException;
 import org.openrdf.query.QueryEvaluationException;
 import org.openrdf.repository.Repository;
@@ -16,7 +16,7 @@ import java.io.IOException;
 /**
  * Scorpio4 (c) 2014
  * Module: com.scorpio4.maven
- * User  : lee
+ * @author lee
  * Date  : 16/06/2014
  * Time  : 5:38 PM
  */
@@ -30,7 +30,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 
-public class UploadMojo extends BaseFactToolsMojo {
+public class UploadMojo extends ScorpioMojo {
 
     @Override
     public void executeInternal() throws FactException, ConfigException, IOException, RepositoryException, QueryEvaluationException, MalformedQueryException {
@@ -39,11 +39,11 @@ public class UploadMojo extends BaseFactToolsMojo {
         Repository sandboxRepository = newSandboxRepository(getProject().getProperties());
         RepositoryConnection sandboxConnection = sandboxRepository.getConnection();
 
-        SPARQLer sparqLer = new SPARQLer(getFactSpace());
-        sparqLer.clean(sandboxConnection);
+        SPARQLRules SPARQLRules = new SPARQLRules(sandboxConnection,getIdentity());
+        SPARQLRules.clean(sandboxConnection);
 
-        Asset asset = getAsset("mojo/upload", COMMON.MIME_SPARQL);
-        int copied = sparqLer.copy(sandboxConnection, asset.toString());
+        Asset asset = getAsset("mojo/upload", COMMONS.MIME_SPARQL);
+        int copied = SPARQLRules.apply(sandboxConnection, asset.toString());
         getLog().info("Copied "+copied+" statements to Sandbox");
         sandboxConnection.close();
     }

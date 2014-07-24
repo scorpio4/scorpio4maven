@@ -1,7 +1,0 @@
-SELECT DISTINCT ?name ?value
-WHERE { ?that ux:option ?this.
-?this
-	ux:name		?name;
-	ux:value	?value.
-
-} BINDINGS ?that { (<{{this}}>) }
