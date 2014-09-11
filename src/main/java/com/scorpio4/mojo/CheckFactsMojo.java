@@ -43,7 +43,7 @@ public class CheckFactsMojo extends ScorpioMojo {
 	    SPARQLRules SPARQLRules = new SPARQLRules(getConnection(),getIdentity());
 
         SesameCRUD sesameCRUD = new SesameCRUD(getFactSpace());
-        Collection<Map> rules = sesameCRUD.read("mojo/factchecks", getProject().getProperties());
+        Collection<Map> rules = sesameCRUD.read("mojo/checks", getProject().getProperties());
 
         for(Map rule:rules) {
             String ruleURI = (String) rule.get("this");

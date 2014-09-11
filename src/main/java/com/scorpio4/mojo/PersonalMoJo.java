@@ -59,7 +59,7 @@ public class PersonalMoJo extends ScorpioMojo {
 		File file = new File(System.getProperty("user.home"), getAppName());
 		file.mkdirs();
 		getLog().info("Working directory: "+file.getAbsolutePath());
-		Personal personal = new Personal(getIdentity(), file, config);
+		Personal personal = new Personal("scorpio4", getIdentity(), file, config);
 		personal.start();
 	}
 }

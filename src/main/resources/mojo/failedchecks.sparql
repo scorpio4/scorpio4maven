@@ -1,4 +1,4 @@
-PREFIX toolchain: 	<http://scorpio4.com/v1/vocab/toolchain/>
+PREFIX toolchain: 	<http://scorpio4.com/v1/vocab/mojo/>
 
 SELECT DISTINCT ?this ?that WHERE {
     ?this a ?that.
